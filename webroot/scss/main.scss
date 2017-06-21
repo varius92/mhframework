@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+// 2. Vendors
+@import
+'vendor/typi/scss/typi',
+'vendor/mappy-breakpoints/mappy-breakpoints',
+'vendor/nomalize.css';
 
 // 1. Abstracts
 @import
@@ -9,11 +14,6 @@
 'abstracts/mixins/grid-framework',
 'abstracts/mixins/grid-helpers',
 'abstracts/mixins/mixins';
-
-
-// 2. Vendors
-@import
-'vendor/nomalize.css';
 
 // 3. Base
 @import
@@ -40,3 +40,5 @@
 // 7. Themes
 
 
+@include init($breakpoints, $columns);
+@include typi-init;

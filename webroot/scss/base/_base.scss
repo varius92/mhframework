@@ -1,3 +1,4 @@
+@include typi-base();
 /**
  * Set up a decent box model on the root element
  */
@@ -17,9 +18,6 @@ html {
   box-sizing: inherit;
 }
 
-
-
-
 /**
  * Basic styles for links
  */
@@ -31,4 +29,8 @@ a {
     //color: $text-color;
     text-decoration: underline;
   }
+}
+
+p {
+  margin: vr(1) 0;
 }
