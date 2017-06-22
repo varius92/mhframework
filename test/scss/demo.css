@@ -27,9 +27,62 @@ a {
 p {
   margin: 1.5rem 0; }
 
+h1, h2, h3, h4, p {
+  margin: 0; }
+
+h1, .h1 {
+  font-size: 5.0625rem;
+  line-height: 3.75rem;
+  margin-bottom: 3rem; }
+  @media all and (min-width: 30em) {
+    h1, .h1 {
+      font-size: 3.375rem;
+      line-height: 3rem; } }
+  @media all and (min-width: 75em) {
+    h1, .h1 {
+      font-size: 5.0625rem;
+      line-height: 3.75rem; } }
+
+h2, .h2 {
+  font-size: 3.375rem;
+  line-height: 3rem;
+  margin-top: 2.25rem;
+  margin-bottom: 1.5rem; }
+  @media all and (min-width: 30em) {
+    h2, .h2 {
+      font-size: 2.25rem;
+      line-height: 2.25rem; } }
+  @media all and (min-width: 75em) {
+    h2, .h2 {
+      font-size: 3.375rem;
+      line-height: 3rem; } }
+
+h3, .h3 {
+  font-size: 2.25rem;
+  line-height: 2.25rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem; }
+  @media all and (min-width: 30em) {
+    h3, .h3 {
+      font-size: 1.5rem;
+      line-height: 1.5rem; } }
+  @media all and (min-width: 75em) {
+    h3, .h3 {
+      font-size: 2.25rem;
+      line-height: 2.25rem; } }
+
+h4, .h4 {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem; }
+
+p {
+  margin-bottom: 1.5rem; }
+
 html {
   font-size: 112.5%;
-  line-height: 1.66667; }
+  line-height: 1.5; }
   @media all and (min-width: 30em) {
     html {
       font-size: 100%; } }
@@ -42,27 +95,6 @@ html {
   @media all and (min-width: 75em) {
     html {
       font-size: 125%; } }
-
-h1, h2, h3, h4, p {
-  margin: 0; }
-
-h1, .h1 {
-  margin-bottom: 3.33333rem; }
-
-h2, .h2 {
-  margin-top: 2.5rem;
-  margin-bottom: 1.25rem; }
-
-h3, .h3 {
-  margin-top: 1.66667rem;
-  margin-bottom: 0.83333rem; }
-
-h4, .h4 {
-  margin-top: 1.66667rem;
-  margin-bottom: 0.83333rem; }
-
-p + p {
-  margin-bottom: 1.66667rem; }
 
 .text--left {
   text-align: left; }
