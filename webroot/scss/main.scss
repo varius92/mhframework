@@ -2,8 +2,8 @@
 
 // 2. Vendors
 @import
+'vendor/mappy-breakpoints/mappy-breakpoints',
 'vendor/typi/scss/typi',
-//'vendor/mappy-breakpoints/mappy-breakpoints',
 'vendor/nomalize.css';
 
 // 1. Abstracts
@@ -41,4 +41,3 @@
 
 
 @include init($breakpoints, $columns);
-@include typi-init;
