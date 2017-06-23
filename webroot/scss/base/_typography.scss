@@ -1,62 +1,57 @@
 //==========================================================================
 // Typi
-// @docu vendor/typi/scss/_typi.scss
+// ----
+// Help: vendor/typi/scss/_typi.scss
+//
+// @base: Font-size & Line-height für den Fließtext (Selektor: <html>)
+// -- @null: ohne Media query
+// -- @breakpoint (xs/sm/md/lg): Media query mit "min-width"
+// -- @value: {font-size} oder ({font-size}, {line-height})
 //==========================================================================
-// Notice - "null:" greift bei 0px bis $xs
 $typi: (
-  // Bodycopy config (html tag)
-        base: (
-                null: (18px, 1.5),
-                $xs : 16px,
-                $sm : 16px,
-                $md : 18px,
-                $lg : 20px,
-        ),
-  // Headlines config h1-h6
-        h1: (
-                null: (ms(4), vr(2.5)),
-                $xs : (ms(3), vr(2)),
-                $lg : (ms(4), vr(2.5)),
-        ),
-        h2: (
-                null: (ms(3), vr(2)),
-                $xs : (ms(2), vr(1.5)),
-                $lg : (ms(3), vr(2)),
-        ),
-        h3: (
-                null: (ms(2), vr(1.5)),
-                $xs : (ms(1), vr(1)),
-                $lg : (ms(2), vr(1.5)),
-        ),
-        h4: (
-                null: (ms(1), vr(1)),
-        ),
+      base: (
+            null: (18px, 1.5),
+            xs : 16px,
+            md : 18px,
+      ),
+      h1: (
+            null: (ms(3), vr(2.5)),
+      ),
+      h2: (
+            null: (ms(2), vr(2)),
+      ),
+      h3: (
+            null: (ms(1), vr(1.5)),
+      ),
+      h4: (
+            null: (1em, vr(1.5)),
+      ),
 );
 
-// Typi-ms
-// Modular Scale ratio at different breakpoints
+// Typi-ms (Modular Scale je Breakpoint)
 $typi-ms: false;
 
 // Typefaces Map
 $typefaces: false;
 
-// Typi-breakpoint (enable breakpoint mixin)
+// Typi-breakpoint (Breakpoint mixin erlauben)
 $typi-breakpoint: 'mappy-bp';
 
+//
 //==========================================================================
 // Modular Scale
-// @docu vendor/modularscale/
+// -------------
+// All Ratios: vendor/modularscale/_vars.scss
 //==========================================================================
-// Base config
 $ms-base: 1em;
 $ms-ratio: $fifth;
 
+//
 //==========================================================================
-// Headlines
+// Headlines & Text Elements
 //==========================================================================
-// Reset margin
 h1, h2, h3, h4, p {
-  margin: 0;
+  margin: 0; // Reset
 }
 
 h1, .h1 {
@@ -79,11 +74,15 @@ h3, .h3 {
 h4, .h4 {
   @include typi('h4');
   margin-top: vr(1);
-  margin-bottom: vr(0.5);
-}
-
-p  {
   margin-bottom: vr(1);
 }
 
+p {
+  margin-bottom: vr(1);
+}
+
+
+
+
+// Fließtext Typographie
 @include typi-base();

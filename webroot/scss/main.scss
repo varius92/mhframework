@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
-// 2. Vendors
+// 1. Vendors
+// ----------
 @import
 'vendor/mappy-breakpoints/mappy-breakpoints',
 'vendor/typi/scss/typi',
@@ -8,6 +9,7 @@
 'vendor/nomalize.css';
 
 // 1. Abstracts
+// ------------
 @import
 'abstracts/variables',
 'abstracts/functions',
@@ -17,6 +19,7 @@
 'abstracts/mixins/mixins';
 
 // 3. Base
+// -------
 @import
 'base/base',
 'base/fonts',
@@ -26,6 +29,7 @@
 
 
 // 4. Layout
+// ---------
 @import
 'layout/col',
 'layout/grid',
@@ -33,12 +37,11 @@
 
 
 // 5. Components
-
-
+// -------------
 // 6. Page
-
-
+// -------
 // 7. Themes
+// ---------
 
 
 @include init($breakpoints, $columns);

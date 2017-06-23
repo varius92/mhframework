@@ -4,8 +4,20 @@
 
   @include variant(container) {
     margin: 0 auto;
-    max-width: map_get($breakpoints, 'lg');
+    max-width: $container-width;
     width: 100%;
+    //@include breakpoint(xs){
+    //  max-width: mappy-convert-to-em(map_get($breakpoints, 'xs'));
+    //}
+    //@include breakpoint(sm){
+    //  max-width: mappy-convert-to-em(map_get($breakpoints, 'sm'));
+    //}
+    //@include breakpoint(md){
+    //  max-width: mappy-convert-to-em(map_get($breakpoints, 'md'));
+    //}
+    //@include breakpoint(lg){
+    //  max-width: mappy-convert-to-em(map_get($breakpoints, 'lg'));
+    //}
   }
 
   @include variant(no-gutters) {

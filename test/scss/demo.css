@@ -1,7 +1,4 @@
 @import url(vendor/nomalize.css);
-/**
- * Set up a decent box model on the root element
- */
 html {
   box-sizing: border-box; }
 
@@ -12,9 +9,14 @@ html {
  * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
  */
 *,
+*,
 *::before,
 *::after {
   box-sizing: inherit; }
+
+body {
+  margin: 0;
+  padding: 0; }
 
 /**
  * Basic styles for links
@@ -24,58 +26,31 @@ a {
   a:hover, a:active, a:focus {
     text-decoration: underline; }
 
-p {
-  margin: 1.5rem 0; }
-
 h1, h2, h3, h4, p {
   margin: 0; }
 
 h1, .h1 {
-  font-size: 5.0625rem;
+  font-size: 3.375rem;
   line-height: 3.75rem;
   margin-bottom: 3rem; }
-  @media all and (min-width: 30em) {
-    h1, .h1 {
-      font-size: 3.375rem;
-      line-height: 3rem; } }
-  @media all and (min-width: 75em) {
-    h1, .h1 {
-      font-size: 5.0625rem;
-      line-height: 3.75rem; } }
 
 h2, .h2 {
-  font-size: 3.375rem;
+  font-size: 2.25rem;
   line-height: 3rem;
   margin-top: 2.25rem;
   margin-bottom: 1.5rem; }
-  @media all and (min-width: 30em) {
-    h2, .h2 {
-      font-size: 2.25rem;
-      line-height: 2.25rem; } }
-  @media all and (min-width: 75em) {
-    h2, .h2 {
-      font-size: 3.375rem;
-      line-height: 3rem; } }
 
 h3, .h3 {
-  font-size: 2.25rem;
+  font-size: 1.5rem;
   line-height: 2.25rem;
   margin-top: 1.5rem;
   margin-bottom: 0.75rem; }
-  @media all and (min-width: 30em) {
-    h3, .h3 {
-      font-size: 1.5rem;
-      line-height: 1.5rem; } }
-  @media all and (min-width: 75em) {
-    h3, .h3 {
-      font-size: 2.25rem;
-      line-height: 2.25rem; } }
 
 h4, .h4 {
-  font-size: 1.5rem;
-  line-height: 1.5rem;
+  font-size: 1rem;
+  line-height: 2.25rem;
   margin-top: 1.5rem;
-  margin-bottom: 0.75rem; }
+  margin-bottom: 1.5rem; }
 
 p {
   margin-bottom: 1.5rem; }
@@ -86,15 +61,9 @@ html {
   @media all and (min-width: 30em) {
     html {
       font-size: 100%; } }
-  @media all and (min-width: 48em) {
-    html {
-      font-size: 100%; } }
   @media all and (min-width: 62em) {
     html {
       font-size: 112.5%; } }
-  @media all and (min-width: 75em) {
-    html {
-      font-size: 125%; } }
 
 .text--left {
   text-align: left; }
@@ -116,7 +85,7 @@ html {
   padding: 0 0.75rem; }
   .grid--container {
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 75em;
     width: 100%; }
   .grid--no-gutters {
     padding: 0; }

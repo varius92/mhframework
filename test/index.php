@@ -63,6 +63,9 @@
                         takimata sanctus est Lorem ipsum dolor sit amet.
                     </p>
                     <div class="row">
+                        <div class="col">&nbsp;</div>
+                    </div>
+                    <div class="row">
                         <div class="col col--md-6">
                             <p class="text--justify">
                                 Duis autem vel eum iriure dolor in hendrerit in
@@ -73,7 +76,21 @@
                                 praesent
                                 luptatum
                                 zzril delenit augue duis dolore te feugait nulla
-                                facilisi.
+                                facilisi. Duis autem vel eum iriure dolor in
+                                hendrerit in
+                                vulputate velit esse molestieconsequat, vel
+                                illum dolore
+                                eu feugiat nulla facilisis at vero eros et
+                                accumsan et iusto odio dignissim qui blandit
+                                praesent
+                                luptatum
+                                zzril delenit augue duis dolore te feugait nulla
+                                facilisi. Lorem ipsum dolor sit amet,
+                                consectetur adipisicing elit. Ab ad alias
+                                asperiores earum eveniet modi non odio quam,
+                                repellendus vero. Corporis dicta eos eveniet
+                                impedit praesentium quaerat quas ullam
+                                voluptatem?
                             </p>
                         </div>
                         <div class="col col--md-6">
@@ -82,13 +99,27 @@
                                 vulputate velit esse molestieconsequat, vel
                                 illum dolore
                                 eu feugiat nulla facilisis at vero eros et
+                                Duis autem vel eum iriure dolor in hendrerit in
+                                vulputate velit esse molestieconsequat, vel
+                                illum dolore
+                                eu feugiat nulla facilisis at vero eros et
                                 accumsan et iusto odio dignissim qui blandit
                                 praesent
                                 luptatum
                                 zzril delenit augue duis dolore te feugait nulla
-                                facilisi.
+                                facilisi. Lorem ipsum dolor sit amet. <br><br>
+                                Consectetur adipisicing elit. Aliquid, deserunt
+                                doloremque ducimus eius eligendi facere harum,
+                                illum impedit modi molestiae nesciunt nulla
+                                perspiciatis placeat quasi quidem repellat sequi
+                                ut velit.
                             </p>
                         </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">&nbsp;</div>
+                        <div class="col">&nbsp;</div>
+                        <div class="col">&nbsp;</div>
                     </div>
                     <div class="row">
                         <div class="col col--md-3">
