@@ -1,23 +1,4 @@
 //==========================================================================
-// Responsiveness & Grid
-//==========================================================================
-// Breakpoints
-$breakpoints: (
-      xs: 480px,
-      sm: 768px,
-      md: 992px,
-      lg: 1200px
-);
-// Number of columns
-$columns: 12;
-
-// Gutter width
-$gutter: vr(1);
-
-// Container width
-$container-width: 75em;
-
-//==========================================================================
 // Colors
 //==========================================================================
 $color-primary: #3E50B4;
@@ -29,11 +10,77 @@ $color-secondary-hover: lighten($color-secondary, 20%);
 $color-black: #000000;
 $color-gray-dark: #212121;
 $color-gray-mid: #616161;
-$color-gray: #BDBDBD;
+$color-gray: #b6b6b6;
 $color-gray-light: #EEEEEE;
 $color-white: #FFFFFF;
+
+//==========================================================================
+// Font
+//==========================================================================
+$font-base: 'Open Sans', sans-serif;
+$font-primary: 'Roboto', sans-serif;
+
+$text-color: $color-gray-mid;
+$text-weight: 300;
+
+//==========================================================================
+// Typi
+// ----
+// Help: vendor/typi/scss/_typi.scss
+//==========================================================================
+$typi: (
+      base: (
+            null: (16px, 1.5),
+            sm : 18px,
+      ),
+      h1: (
+            null: (ms(4), vr(4)),
+      ),
+      h2: (
+            null: (ms(3), vr(3)),
+      ),
+      h3: (
+            null: (ms(2), vr(2)),
+      ),
+      h4: (
+            null: (ms(1), vr(1)),
+      ),
+);
+
+// Typi-ms
+$typi-ms: false;
+
+// Typi-breakpoint
+$typi-breakpoint: 'mappy-bp';
+
+//==========================================================================
+// Modular Scale
+// -------------
+// Anwendung: ms(step)
+// Siehe: http://www.modularscale.com/
+// Alle Ratios: vendor/modularscale/_vars.scss
+//==========================================================================
+$ms-base: 1em;
+$ms-ratio: $fifth;
+
+//==========================================================================
+// Responsiveness & Grid
+//==========================================================================
+// Breakpoints
+$breakpoints: (
+      xs: 480px,
+      sm: 768px,
+      md: 992px,
+      lg: 1200px
+);
+
+$columns: 12;
+$gutter: vr(1);
+$container-width: 50em;
 
 //==========================================================================
 // Global
 //==========================================================================
 $global-radius: 0.2em;
+$global-transition: 200ms;
+

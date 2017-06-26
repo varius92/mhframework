@@ -1,79 +1,50 @@
 //==========================================================================
-// Typi
-// ----
-// Help: vendor/typi/scss/_typi.scss
-//
-// @base: Font-size & Line-height für den Fließtext (Selektor: <html>)
-// -- @null: ohne Media query
-// -- @breakpoint (xs/sm/md/lg): Media query mit "min-width"
-// -- @value: {font-size} oder ({font-size}, {line-height})
+// Fließtext
 //==========================================================================
-$typi: (
-      base: (
-            null: (18px, 1.5),
-            xs : 16px,
-            md : 18px,
-      ),
-      h1: (
-            null: (ms(3), vr(2.5)),
-      ),
-      h2: (
-            null: (ms(2), vr(2)),
-      ),
-      h3: (
-            null: (ms(1), vr(1.5)),
-      ),
-      h4: (
-            null: (1em, vr(1.5)),
-      ),
-);
+@include typi-init;
+@include typi-base();
 
-// Typi-ms (Modular Scale je Breakpoint)
-$typi-ms: false;
+body {
+  font-family: $font-base;
+  font-weight: $text-weight;
+  color: $text-color;
+}
 
-// Typefaces Map
-$typefaces: false;
-
-// Typi-breakpoint (Breakpoint mixin erlauben)
-$typi-breakpoint: 'mappy-bp';
-
-//
-//==========================================================================
-// Modular Scale
-// -------------
-// All Ratios: vendor/modularscale/_vars.scss
-//==========================================================================
-$ms-base: 1em;
-$ms-ratio: $fifth;
-
-//
 //==========================================================================
 // Headlines & Text Elements
 //==========================================================================
+h1, h2, h3 {
+  font-family: $font-primary;
+}
+
 h1, h2, h3, h4, p {
   margin: 0; // Reset
 }
 
 h1, .h1 {
   @include typi('h1');
+  color: $color-primary;
   margin-bottom: vr(2);
 }
 
 h2, .h2 {
   @include typi('h2');
-  margin-top: vr(1.5);
+  color: $color-secondary;
+  margin-top: vr(3);
   margin-bottom: vr(1);
 }
 
 h3, .h3 {
   @include typi('h3');
-  margin-top: vr(1);
-  margin-bottom: vr(0.5);
+  color: $color-gray-mid;
+  margin-top: vr(2);
+  margin-bottom: vr(1);
 }
 
 h4, .h4 {
   @include typi('h4');
-  margin-top: vr(1);
+  color: $color-gray;
+  margin-top: vr(2);
   margin-bottom: vr(1);
 }
 
@@ -81,8 +52,11 @@ p {
   margin-bottom: vr(1);
 }
 
+ul, ol, dl, table {
+  margin: vr(1) 0;
+  padding-left: vr(1);
+  li & {
+    margin: 0;
+  }
+}
 
-
-
-// Fließtext Typographie
-@include typi-base();

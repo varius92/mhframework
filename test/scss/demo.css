@@ -1,4 +1,6 @@
 @import url(vendor/nomalize.css);
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i");
 html {
   box-sizing: border-box; }
 
@@ -18,52 +20,77 @@ body {
   margin: 0;
   padding: 0; }
 
-/**
- * Basic styles for links
- */
 a {
   text-decoration: none; }
   a:hover, a:active, a:focus {
     text-decoration: underline; }
 
+hr {
+  margin: 1.5rem 0; }
+
+blockquote {
+  margin: 1.5rem 3rem; }
+
+html {
+  font-size: 100%;
+  line-height: 1.5; }
+  @media all and (min-width: 48em) {
+    html {
+      font-size: 112.5%; } }
+
+html {
+  font-size: 100%;
+  line-height: 1.5; }
+  @media all and (min-width: 48em) {
+    html {
+      font-size: 112.5%; } }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  color: #616161; }
+
+h1, h2, h3 {
+  font-family: "Roboto", sans-serif; }
+
 h1, h2, h3, h4, p {
   margin: 0; }
 
 h1, .h1 {
-  font-size: 3.375rem;
-  line-height: 3.75rem;
+  font-size: 5.0625rem;
+  line-height: 6rem;
+  color: #3E50B4;
   margin-bottom: 3rem; }
 
 h2, .h2 {
-  font-size: 2.25rem;
-  line-height: 3rem;
-  margin-top: 2.25rem;
+  font-size: 3.375rem;
+  line-height: 4.5rem;
+  color: #FF3F80;
+  margin-top: 4.5rem;
   margin-bottom: 1.5rem; }
 
 h3, .h3 {
-  font-size: 1.5rem;
-  line-height: 2.25rem;
-  margin-top: 1.5rem;
-  margin-bottom: 0.75rem; }
+  font-size: 2.25rem;
+  line-height: 3rem;
+  color: #616161;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem; }
 
 h4, .h4 {
-  font-size: 1rem;
-  line-height: 2.25rem;
-  margin-top: 1.5rem;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  color: #b6b6b6;
+  margin-top: 3rem;
   margin-bottom: 1.5rem; }
 
 p {
   margin-bottom: 1.5rem; }
 
-html {
-  font-size: 112.5%;
-  line-height: 1.5; }
-  @media all and (min-width: 30em) {
-    html {
-      font-size: 100%; } }
-  @media all and (min-width: 62em) {
-    html {
-      font-size: 112.5%; } }
+ul, ol, dl, table {
+  margin: 1.5rem 0;
+  padding-left: 1.5rem; }
+  li ul, li ol, li dl, li table {
+    margin: 0; }
 
 .text--left {
   text-align: left; }
@@ -76,16 +103,22 @@ html {
   box-sizing: border-box;
   flex: 0 0 100%;
   max-width: 100%;
-  padding: 0 0.75rem 0 0.75rem; }
+  padding-top: 0;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+  padding-bottom: 0; }
   .col--no-gutters {
     padding: 0; }
 
 .grid {
   box-sizing: border-box;
-  padding: 0 0.75rem; }
+  padding-top: 0;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+  padding-bottom: 0; }
   .grid--container {
     margin: 0 auto;
-    max-width: 75em;
+    max-width: 50em;
     width: 100%; }
   .grid--no-gutters {
     padding: 0; }
@@ -97,7 +130,10 @@ html {
   flex-direction: row;
   flex-wrap: wrap;
   list-style: none;
-  margin: -0.75rem -0.75rem;
+  margin-top: 0;
+  margin-right: -0.75rem;
+  margin-left: -0.75rem;
+  margin-bottom: 0;
   padding: 0; }
   .row:last-child {
     margin-bottom: 0; }

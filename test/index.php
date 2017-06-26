@@ -33,12 +33,15 @@
                 <header class="text--center"><h3>Typography</h3></header>
                 <article>
                     <header class="text--center"><h4>Headings</h4></header>
-                    <p>
                     <h1>Heading 1</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur at consequatur consequuntur cupiditate dolor doloribus, ducimus ea, et eum illo iste minus nihil officiis provident quisquam sed sint tempora, vel.</p>
                     <h2>Heading 2</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur at consequatur consequuntur cupiditate dolor doloribus, ducimus ea, et eum illo iste minus nihil officiis provident quisquam sed sint tempora, vel.</p>
                     <h3>Heading 3</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur at consequatur consequuntur cupiditate dolor doloribus, ducimus ea, et eum illo iste minus nihil officiis provident quisquam sed sint tempora, vel.</p>
                     <h4>Heading 4</h4>
-                    </p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur at consequatur consequuntur cupiditate dolor doloribus, ducimus ea, et eum illo iste minus nihil officiis provident quisquam sed sint tempora, vel.</p>
+
                 </article>
                 <article>
                     <header class="text--center"><h4>Paragraph</h4></header>
@@ -115,11 +118,6 @@
                                 ut velit.
                             </p>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">&nbsp;</div>
-                        <div class="col">&nbsp;</div>
-                        <div class="col">&nbsp;</div>
                     </div>
                     <div class="row">
                         <div class="col col--md-3">

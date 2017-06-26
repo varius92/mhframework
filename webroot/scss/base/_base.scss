@@ -21,9 +21,11 @@ body{
   padding: 0;
 }
 
-/**
- * Basic styles for links
- */
+
+
+
+
+
 a {
   //color: $brand-color;
   text-decoration: none;
@@ -34,3 +36,11 @@ a {
   }
 }
 
+
+hr {
+  margin: vr(1) 0;
+}
+
+blockquote {
+  margin: vr(1) vr(2);
+}
