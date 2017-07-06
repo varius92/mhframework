@@ -92,12 +92,39 @@ ul, ol, dl, table {
   li ul, li ol, li dl, li table {
     margin: 0; }
 
-.text--left {
+.u-block {
+  display: block; }
+.u-inline {
+  display: inline; }
+.u-inline-block {
+  display: inline-block; }
+
+.u-float-right {
+  float: right; }
+.u-float-left {
+  float: left; }
+.u-float-none {
+  float: none; }
+
+.u-hidden {
+  display: none; }
+.u-visible {
+  display: block; }
+
+.u-text-left {
   text-align: left; }
-.text--center {
-  text-align: center; }
-.text--right {
+.u-text-right {
   text-align: right; }
+.u-text-center {
+  text-align: center; }
+.u-text-justify {
+  text-align: justify; }
+
+.u-sticky {
+  position: fixed; }
+
+.u-rounded {
+  border-radius: 0.2em; }
 
 .col {
   box-sizing: border-box;
@@ -174,14 +201,14 @@ ul, ol, dl, table {
   .col--xs-flex {
     display: flex; }
 
-  .text--xs-right {
-    text-align: right; }
+  .u-hidden-xs {
+    display: none; }
 
-  .text--xs-left {
-    text-align: left; }
+  .u-visible-xs {
+    display: block; }
 
-  .text--xs-center {
-    text-align: center; }
+  .u-sticky-xs {
+    position: fixed; }
 
   .col--xs {
     flex-grow: 1;
@@ -282,14 +309,14 @@ ul, ol, dl, table {
   .col--sm-flex {
     display: flex; }
 
-  .text--sm-right {
-    text-align: right; }
+  .u-hidden-sm {
+    display: none; }
 
-  .text--sm-left {
-    text-align: left; }
+  .u-visible-sm {
+    display: block; }
 
-  .text--sm-center {
-    text-align: center; }
+  .u-sticky-sm {
+    position: fixed; }
 
   .col--sm {
     flex-grow: 1;
@@ -390,14 +417,14 @@ ul, ol, dl, table {
   .col--md-flex {
     display: flex; }
 
-  .text--md-right {
-    text-align: right; }
+  .u-hidden-md {
+    display: none; }
 
-  .text--md-left {
-    text-align: left; }
+  .u-visible-md {
+    display: block; }
 
-  .text--md-center {
-    text-align: center; }
+  .u-sticky-md {
+    position: fixed; }
 
   .col--md {
     flex-grow: 1;
@@ -498,14 +525,14 @@ ul, ol, dl, table {
   .col--lg-flex {
     display: flex; }
 
-  .text--lg-right {
-    text-align: right; }
+  .u-hidden-lg {
+    display: none; }
 
-  .text--lg-left {
-    text-align: left; }
+  .u-visible-lg {
+    display: block; }
 
-  .text--lg-center {
-    text-align: center; }
+  .u-sticky-lg {
+    position: fixed; }
 
   .col--lg {
     flex-grow: 1;

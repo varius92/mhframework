@@ -40,20 +40,37 @@
   }
 }
 
-@mixin make-text-helpers($breakpoint) {
-  .text--#{$breakpoint}-right {
-    text-align: right;
+//@mixin make-text-helpers($breakpoint) {
+//  .text--#{$breakpoint}-right {
+//    text-align: right;
+//  }
+//  .text--#{$breakpoint}-left {
+//    text-align: left;
+//  }
+//  .text--#{$breakpoint}-center {
+//    text-align: center;
+//  }
+//}
+
+@mixin make-hidden-visible-helpers($breakpoint) {
+  .u-hidden-#{$breakpoint} {
+    display: none;
   }
-  .text--#{$breakpoint}-left {
-    text-align: left;
+  .u-visible-#{$breakpoint} {
+    display: block;
   }
-  .text--#{$breakpoint}-center {
-    text-align: center;
+}
+
+@mixin make-sticky-helpers($breakpoint) {
+  .u-sticky-#{$breakpoint} {
+    position: fixed;
   }
 }
 
 @mixin make-helpers($breakpoint) {
   @include make-row-helpers($breakpoint);
   @include make-col-helpers($breakpoint);
-  @include make-text-helpers($breakpoint);
+  //@include make-text-helpers($breakpoint);
+  @include make-hidden-visible-helpers($breakpoint);
+  @include make-sticky-helpers($breakpoint);
 }

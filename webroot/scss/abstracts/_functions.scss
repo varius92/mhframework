@@ -1,3 +1,5 @@
+$base-url: '' !default;
+
 /// Native `url(..)` function wrapper
 /// @param {String} $base - base URL for the asset
 /// @param {String} $type - asset type folder (e.g. `fonts/`)
