@@ -15,7 +15,7 @@
     margin-bottom: 0;
   }
 
-  @include variant(no-gutters) {
+  @include modifier(no-gutters) {
     margin: 0;
   }
 }

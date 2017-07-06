@@ -5,7 +5,7 @@
   padding-left: $gutter/2;
   padding-bottom: 0;
 
-  @include variant(container) {
+  @include modifier(container) {
     margin: 0 auto;
     max-width: $container-width;
     width: 100%;
@@ -23,7 +23,7 @@
     //}
   }
 
-  @include variant(no-gutters) {
+  @include modifier(no-gutters) {
     padding: 0;
   }
 }

@@ -1,10 +1,10 @@
-@mixin has($element) {
+@mixin element($element) {
   &__#{$element} {
     @content;
   }
 }
 
-@mixin variant($modifier) {
+@mixin modifier($modifier) {
   &--#{$modifier} {
     @content;
   }
