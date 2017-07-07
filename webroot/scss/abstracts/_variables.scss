@@ -1,6 +1,7 @@
 //==========================================================================
 // Colors
 //==========================================================================
+
 $color-primary: #3E50B4;
 $color-secondary: #FF3F80;
 
@@ -24,9 +25,22 @@ $color-success: #3dbe62;
 $color-warning: #f7ba45;
 $color-focus: #1c86f2;
 
+// Color-map für Helper @ _utilities
+// .u-color-#{$color-name} {};
+// .u-bg-#{$color-name} {};
+$color-map: (
+      primary: $color-primary,
+      secondary: $color-secondary,
+      error: $color-error,
+      success: $color-success,
+      warning: $color-warning,
+      focus: $color-focus,
+);
+
 //==========================================================================
 // Font
 //==========================================================================
+
 $font-base: 'Open Sans', sans-serif;
 $font-primary: 'Roboto', sans-serif;
 
@@ -38,6 +52,7 @@ $text-weight: 300;
 // ----
 // Help: vendor/typi/scss/_typi.scss
 //==========================================================================
+
 $typi: (
       base: (
             null: (18px, 1.5),
@@ -70,12 +85,14 @@ $typi-breakpoint: 'mappy-bp';
 // Siehe: http://www.modularscale.com/
 // Alle Ratios: vendor/modularscale/_vars.scss
 //==========================================================================
+
 $ms-base: 1em;
 $ms-ratio: $fifth;
 
 //==========================================================================
 // Responsiveness & Grid
 //==========================================================================
+
 $columns: 12;
 $gutter: vr(1);
 $container-width: 50em;
@@ -91,6 +108,7 @@ $breakpoints: (
 //==========================================================================
 // Icons
 //==========================================================================
+
 // Custom Icons
 $icon-font: 'icomoon';
 
@@ -107,19 +125,16 @@ $fa-li-width: (30em / 14);
 //==========================================================================
 // Global
 //==========================================================================
+
 $global-radius: 0.2em;
 $global-transition: 200ms;
 
-$z-index-1: 100;
-$z-index-2: 200;
-$z-index-3: 300;
-$z-index-4: 400;
-$z-index-5: 500;
-$z-index-6: 600;
-$z-index-7: 700;
-$z-index-8: 800;
-$z-index-9: 900;
-$z-index-10: 1000;
+$zindex-navbar: 500 !default;
+$zindex-dropdown: 600 !default;
+$zindex-sticky: 700 !default;
+$zindex-modal: 800 !default;
+$zindex-popover: 900 !default;
+$zindex-tooltip: 1000 !default;
 
 // @siehe _functions.scss
-$base-url: 'webroot/';
+$base-dir: 'webroot/';
