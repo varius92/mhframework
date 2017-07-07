@@ -6,8 +6,7 @@
 'vendor/mappy-breakpoints/mappy-breakpoints',
 'vendor/typi/scss/typi',
 'vendor/modularscale',
-'vendor/nomalize.css',
-'vendor/font-awesome/scss/font-awesome';
+'vendor/nomalize.css';
 
 // 1. Abstracts
 // ------------
@@ -38,10 +37,15 @@
 
 // 5. Components
 // -------------
+@import
+'components/Icon';
 // 6. Page
 // -------
 // 7. Themes
 // ---------
-
+//
+// Vendor
+//
+@import 'vendor/font-awesome/scss/font-awesome';
 
 @include init($breakpoints, $columns);

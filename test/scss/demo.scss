@@ -1,9 +1,39 @@
-@import "../../webroot/scss/main";
+html {
+  // setting default font size
+  //font-size: 200% !important;
+}
 
-#test {
+
+.pixel {
   background: red;
-  max-width: 30em;
-  @include breakpoint(xs) {
-    background: blue;
+  @media (min-width: 400px) {
+    opacity: 0.5
   }
+}
+
+.em {
+  background: green;
+  @media (min-width: 25em) {
+    opacity: 0.5
+  }
+}
+
+.rem {
+  background: blue;
+  @media (min-width: 25rem) {
+    opacity: 0.5
+  }
+}
+div {
+  height:200px;
+  color: #000;
+  overflow: hidden;
+
+}
+h1  {
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
 }

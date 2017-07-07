@@ -14,12 +14,21 @@ $color-gray: #b6b6b6;
 $color-gray-light: #EEEEEE;
 $color-white: #FFFFFF;
 
+// Links
+$color-link: #3794de;
+$color-link-hover: #f03c69;
+
+// States
+$color-error: #f03d3d;
+$color-success: #3dbe62;
+$color-warning: #f7ba45;
+$color-focus: #1c86f2;
+
 //==========================================================================
 // Font
 //==========================================================================
 $font-base: 'Open Sans', sans-serif;
 $font-primary: 'Roboto', sans-serif;
-$font-icon: 'Icons';
 
 $text-color: $color-gray-mid;
 $text-weight: 300;
@@ -31,7 +40,7 @@ $text-weight: 300;
 //==========================================================================
 $typi: (
       base: (
-            null: (16px, 1.5),
+            null: (18px, 1.5),
             sm : 18px,
       ),
       h1: (
@@ -80,10 +89,37 @@ $breakpoints: (
 );
 
 //==========================================================================
+// Icons
+//==========================================================================
+// Custom Icons
+$icon-font: 'icomoon';
+
+// Font-Awesome Config
+$fa-font-path: "vendor/font-awesome/fonts/";
+$fa-font-size-base: 1em;
+$fa-line-height-base: vr(1);
+$fa-css-prefix: Icon-fa;
+$fa-version: "4.7.0";
+$fa-border-color: #eee;
+$fa-inverse: #fff;
+$fa-li-width: (30em / 14);
+
+//==========================================================================
 // Global
 //==========================================================================
 $global-radius: 0.2em;
 $global-transition: 200ms;
+
+$z-index-1: 100;
+$z-index-2: 200;
+$z-index-3: 300;
+$z-index-4: 400;
+$z-index-5: 500;
+$z-index-6: 600;
+$z-index-7: 700;
+$z-index-8: 800;
+$z-index-9: 900;
+$z-index-10: 1000;
 
 // @siehe _functions.scss
 $base-url: 'webroot/';
