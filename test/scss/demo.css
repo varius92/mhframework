@@ -1,31 +1,24 @@
-.pixel {
-  background: red; }
-  @media (min-width: 400px) {
-    .pixel {
-      opacity: 0.5; } }
-
-.em {
-  background: green; }
-  @media (min-width: 25em) {
-    .em {
-      opacity: 0.5; } }
-
-.rem {
-  background: blue; }
-  @media (min-width: 25rem) {
-    .rem {
-      opacity: 0.5; } }
-
-div {
-  height: 200px;
-  color: #000;
-  overflow: hidden; }
-
-h1 {
-  font-size: 50px;
-  font-weight: bold;
-  line-height: 1;
-  margin: 0;
-  padding: 0; }
+.test-navbar {
+  height: 60px;
+  padding: 15px;
+  background: #333; }
+  .test-navbar ul {
+    margin: 0;
+    padding: 0; }
+    .test-navbar ul li {
+      display: inline-block;
+      margin-right: 30px; }
+      .test-navbar ul li a {
+        color: white; }
+        .test-navbar ul li a:before {
+          content: '>';
+          display: inline-block;
+          font-size: 16px;
+          margin-right: 5px;
+          color: #333; }
+        .test-navbar ul li a:hover {
+          text-decoration: none; }
+          .test-navbar ul li a:hover:before {
+            color: white; }
 
 /*# sourceMappingURL=demo.css.map */

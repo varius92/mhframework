@@ -15,8 +15,8 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="../webroot/scss/main.css">
-    <link rel="stylesheet" href="scss/demo.css">
+    <link rel="stylesheet" href="../../webroot/scss/main.css">
+    <link rel="stylesheet" href="../scss/demo.css">
 </head>
 <body>
 
