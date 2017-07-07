@@ -13,9 +13,15 @@
 @import
 'abstracts/variables',
 'abstracts/functions',
-'abstracts/mixins/bem',
-'abstracts/mixins/grid-framework',
-'abstracts/mixins/mixins';
+  /* Vendor prefix Mixins*/
+'abstracts/browsersupport/vendor',
+'abstracts/browsersupport/border-radius',
+'abstracts/browsersupport/placeholder',
+'abstracts/browsersupport/transitions',
+  /* Mixins */
+'abstracts/m-bem',
+'abstracts/m-grid-framework',
+'abstracts/m-helper';
 
 // 3. Base
 // -------
@@ -43,6 +49,8 @@
 // -------
 // 7. Themes
 // ---------
+@import
+'themes/themes';
 //
 // Vendor
 //

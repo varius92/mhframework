@@ -18,11 +18,6 @@
     }
   }
 }
-.link {
-  @include on-event(){
-    color: red;
-  }
-}
 
 /// Make a context based selector a little more friendly
 /// @author Hugo Giraudel
@@ -33,11 +28,17 @@
   }
 }
 
-// Alias for the mappy-breakpoint Mixin "mappy-bp"
-// @ vendor/mappy-breakpoints/_mappy-breakpoints.scss
+// Alias für das mappy-breakpoint Mixin "mappy-bp"
+// @siehe vendor/mappy-breakpoints/_mappy-breakpoints.scss
 @mixin breakpoint($args) {
   @include mappy-bp($args){
     @content
   }
 }
 
+// Reset list
+@mixin reset-list(){
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
