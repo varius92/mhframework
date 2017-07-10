@@ -65,7 +65,7 @@
 @mixin _ty-output-with-breakpoint-library (
   $library: false,
   $breakpoint: null,
-  $breakpoints: $breakpoints
+  $breakpoints: $grid-breakpoints
 ) {
   $lib: null;
 

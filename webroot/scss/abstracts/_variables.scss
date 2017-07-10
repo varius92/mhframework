@@ -4,7 +4,6 @@
 
 $color-primary: #3E50B4;
 $color-secondary: #FF3F80;
-
 $color-primary-hover: lighten($color-primary, 20%);
 $color-secondary-hover: lighten($color-secondary, 20%);
 
@@ -15,19 +14,12 @@ $color-gray: #b6b6b6;
 $color-gray-light: #EEEEEE;
 $color-white: #FFFFFF;
 
-// Links
-$color-link: #3794de;
-$color-link-hover: #f03c69;
-
-// States
 $color-error: #f03d3d;
 $color-success: #3dbe62;
-$color-warning: #f7ba45;
+$color-warning: #f7ac32;
 $color-focus: #1c86f2;
 
-// Color-map für Helper @ _utilities
-// .u-color-#{$color-name} {};
-// .u-bg-#{$color-name} {};
+// Color-map für Helper
 $color-map: (
       primary: $color-primary,
       secondary: $color-secondary,
@@ -58,24 +50,21 @@ $typi: (
             null: (18px, 1.5),
             sm : 18px,
       ),
-      h1: (
-            null: (ms(4), vr(4)),
+      h1-map: (
+            null: (ms(4), vr(3.5)),
       ),
-      h2: (
+      h2-map: (
             null: (ms(3), vr(3)),
       ),
-      h3: (
+      h3-map: (
             null: (ms(2), vr(2)),
       ),
-      h4: (
+      h4-map: (
             null: (ms(1), vr(1)),
       ),
 );
 
-// Typi-ms
 $typi-ms: false;
-
-// Typi-breakpoint
 $typi-breakpoint: 'mappy-bp';
 
 //==========================================================================
@@ -87,18 +76,17 @@ $typi-breakpoint: 'mappy-bp';
 //==========================================================================
 
 $ms-base: 1em;
-$ms-ratio: $fifth;
+$ms-ratio: 2;
 
 //==========================================================================
 // Responsiveness & Grid
 //==========================================================================
 
-$columns: 12;
-$gutter: vr(1);
-$container-width: 50em;
+$grid-columns: 12;
+$grid-gutter: vr(1);
+$grid-container-width: 50em;
 
-// Breakpoints
-$breakpoints: (
+$grid-breakpoints: (
       xs: 480px,
       sm: 768px,
       md: 992px,
@@ -112,15 +100,11 @@ $breakpoints: (
 // Custom Icons
 $icon-font: 'icomoon';
 
-// Font-Awesome Config
-$fa-font-path: "vendor/font-awesome/fonts/";
-$fa-font-size-base: 1em;
-$fa-line-height-base: vr(1);
+// Font-Awesome
 $fa-css-prefix: Icon-fa;
-$fa-version: "4.7.0";
-$fa-border-color: #eee;
-$fa-inverse: #fff;
-$fa-li-width: (30em / 14);
+$fa-font-size-base: 1rem;
+$fa-line-height-base: vr(1);
+$fa-font-path: "../scss/vendor/font-awesome/fonts";
 
 //==========================================================================
 // Global

@@ -30,7 +30,7 @@
   $typi-ms: $typi-ms,
   $typi-breakpoint: $typi-breakpoint,
   $typefaces: $typefaces,
-  $breakpoints: $breakpoints
+  $breakpoints: $grid-breakpoints
 ) {
   @include _ty-write-breakpoints((
     baseline-push: $baseline,
@@ -56,7 +56,7 @@
   $selector: 'html',
   $typi: $typi,
   $typi-ms: $typi-ms,
-  $breakpoints: $breakpoints
+  $breakpoints: $grid-breakpoints
 ) {
   #{$selector} {
     @include typi(

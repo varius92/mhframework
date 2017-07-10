@@ -91,7 +91,7 @@
   $typi: $typi,
   $typi-ms: $typi-ms,
   $typefaces: $typefaces,
-  $breakpoints: $breakpoints
+  $breakpoints: $grid-breakpoints
 ) {
   @include _ty-write-breakpoints((
     breakpoints: $breakpoints,

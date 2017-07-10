@@ -5,7 +5,7 @@
 @function _ty-has-breakpoint (
   $target: null,
   $breakpoint: $breakpoint,
-  $breakpoints: $breakpoints,
+  $breakpoints: $grid-breakpoints,
   $basemap: $basemap
   ) {
 

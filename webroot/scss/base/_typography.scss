@@ -1,3 +1,9 @@
+h1, h2, h3, h4, p, ul, ol, dl, dd, figure,
+pre, table, fieldset, hr {
+  margin: 0;
+  padding: 0;
+} // Reset
+
 //==========================================================================
 // Fließtext
 //==========================================================================
@@ -17,46 +23,45 @@ h1, h2, h3 {
   font-family: $font-primary;
 }
 
-h1, h2, h3, h4, p {
-  margin: 0; // Reset
-}
-
 h1, .h1 {
-  @include typi('h1');
+  @include typi('h1-map');
   color: $color-primary;
   margin-bottom: vr(2);
 }
 
 h2, .h2 {
-  @include typi('h2');
+  @include typi('h2-map');
   color: $color-secondary;
-  margin-top: vr(3);
-  margin-bottom: vr(1);
+  margin-bottom: vr(2);
 }
 
 h3, .h3 {
-  @include typi('h3');
+  @include typi('h3-map');
   color: $color-gray-mid;
-  margin-top: vr(2);
   margin-bottom: vr(1);
 }
 
 h4, .h4 {
-  @include typi('h4');
+  @include typi('h4-map');
   color: $color-gray;
-  margin-top: vr(2);
   margin-bottom: vr(1);
 }
 
-p {
+//==========================================================================
+// Vertical Rythm
+//==========================================================================
+
+p, figure,
+pre, table, fieldset, hr {
   margin-bottom: vr(1);
 }
 
-ul, ol, dl, table {
-  margin: vr(1) 0;
+ul, ol, dl, dd {
+  margin-bottom:vr(1);
   padding-left: vr(1);
   li & {
-    margin: 0;
+    margin-bottom: 0;
   }
 }
+
 

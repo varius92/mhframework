@@ -1,4 +1,3 @@
-// Placeholder text color
 @mixin placeholder-color($color)
 {
   ::-moz-placeholder
@@ -16,7 +15,6 @@
   }
 }
 
-// Placeholder padding
 @mixin placeholder-padding($padding)
 {
   ::-moz-placeholder

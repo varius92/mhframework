@@ -1,0 +1,69 @@
+//==========================================================================
+// BEM
+//==========================================================================
+
+@mixin element($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+@mixin modifier($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+@mixin when-inside($context) {
+  #{$context} & {
+    @content;
+  }
+}
+
+//==========================================================================
+// Event wrapper
+//==========================================================================
+
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+//==========================================================================
+// Vendor prefix
+// -------------
+// Usage:
+//  block {
+//    @include prefix(filter, grayscale(100%) sepia(25%));
+//  }
+//==========================================================================
+
+$prefix-list: -webkit-, -moz-, -ms-, -o-, "";
+
+@mixin prefix($property, $parameters...) {
+  @each $prefix in $prefix-list {
+    #{$prefix}#{$property}: $parameters;
+  }
+}
+
+//==========================================================================
+// Alias für das mappy-breakpoint Mixin "mappy-bp"
+//==========================================================================
+
+@mixin breakpoint($args) {
+  @include mappy-bp($args){
+    @content
+  }
+}

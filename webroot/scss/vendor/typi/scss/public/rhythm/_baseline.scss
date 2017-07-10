@@ -31,7 +31,7 @@
     background-size: 100% $baseline;
     background-position: 0 $offset;
 
-    @each $breakpoint, $breakpoint-value in $breakpoints {
+    @each $breakpoint, $breakpoint-value in $grid-breakpoints {
       @if map-has-key($base-map, $breakpoint) {
         $font-map-breakpoint: map-fetch($typi, base $breakpoint);
         $_bp-base-font-size: _ty-get-font-size($font-map-breakpoint);
@@ -55,7 +55,7 @@
 
 @mixin baseline-push (
   $typeface: 'primary',
-  $breakpoints: $breakpoints,
+  $breakpoints: $grid-breakpoints,
   $typi: $typi,
   $typi-ms: $typi-ms,
   $typi-breakpoint: $typi-breakpoint,

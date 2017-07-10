@@ -6,7 +6,7 @@
 
 @mixin typi-init(
   $typi: $typi,
-  $breakpoints: $breakpoints,
+  $breakpoints: $grid-breakpoints,
   $typi-ms: $typi-ms,
   $typefaces: $typefaces
 ) {

@@ -21,7 +21,7 @@ $themes: (
       ),
 );
 
-@function map-fetch($map, $keys) {
+@function theme-map-fetch($map, $keys) {
   $key: nth($keys, 1);
   $length: length($keys);
   $value: map-get($map, $key);
@@ -34,7 +34,7 @@ $themes: (
         $rest: append($rest, nth($keys, $i))
       }
 
-      @return map-fetch($value, $rest);
+      @return theme-map-fetch($value, $rest);
 
     } @else {
       @return $value;
@@ -48,8 +48,8 @@ $themes: (
   @each $theme, $map in $themes {
     .#{$theme} & {
       // Properties festlegen
-      $theme-color: map-fetch($themes, $theme "color") !global;
-      $theme-background-color: map-fetch($themes, $theme "background-color") !global;
+      $theme-color: theme-map-fetch($themes, $theme "color") !global;
+      $theme-background-color: theme-map-fetch($themes, $theme "background-color") !global;
       // ... hier noch weitere
 
       @content;

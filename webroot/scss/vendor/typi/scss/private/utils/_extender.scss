@@ -10,7 +10,7 @@
   $target: null,
   $typi: $typi,
   $typi-ms: $typi-ms,
-  $breakpoints: $breakpoints
+  $breakpoints: $grid-breakpoints
 ) {
   $_o: null;
 
@@ -53,7 +53,7 @@
     @error "#{$_target-map} must contain a null key";
   }
 
-  @each $breakpoint, $value in $breakpoints {
+  @each $breakpoint, $value in $grid-breakpoints {
     // Updates overwrite value if has target map
     @if map-has-key($_target-map, $breakpoint) {
       $_overwrite-value: map-get($_target-map, $breakpoint);
@@ -93,7 +93,7 @@
   // Initializes $_overwrite-value
   $_overwrite-value: map-get($_return, null);
 
-  @each $breakpoint, $value in $breakpoints {
+  @each $breakpoint, $value in $grid-breakpoints {
     // Updates overwrite value if already in $typi-ms
     @if map-has-key($_return, $breakpoint) {
       $_overwrite-value: map-get($_return, $breakpoint);
@@ -122,7 +122,7 @@
   $map: 'typi',
   $typi: $typi,
   $typi-ms: $typi-ms,
-  $breakpoints: $breakpoints
+  $breakpoints: $grid-breakpoints
 ) {
   $breakpoint-list: map-keys($breakpoints);
   $font-map-list: map-keys($typi);
