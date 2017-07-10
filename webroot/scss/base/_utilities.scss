@@ -1,6 +1,7 @@
 //==========================================================================
 // Color
 //==========================================================================
+
 @each $name, $value in $color-map {
   .u-color-#{$name} {
     color: $value;
@@ -103,4 +104,43 @@
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+//==========================================================================
+// Responsive utilities
+//==========================================================================
+
+@mixin make-hidden-visible-helpers($breakpoint) {
+  .u-hidden-#{$breakpoint} {
+    display: none;
+  }
+  .u-visible-#{$breakpoint} {
+    display: block;
+  }
+}
+
+@mixin make-sticky-helpers($breakpoint) {
+  .u-sticky-#{$breakpoint} {
+    position: fixed;
+  }
+}
+
+//@mixin make-text-helpers($breakpoint) {
+//  .text--#{$breakpoint}-right {
+//    text-align: right;
+//  }
+//  .text--#{$breakpoint}-left {
+//    text-align: left;
+//  }
+//  .text--#{$breakpoint}-center {
+//    text-align: center;
+//  }
+//}
+
+
+
+@mixin make-responsive-utilities($breakpoint) {
+  @include make-hidden-visible-helpers($breakpoint);
+  @include make-sticky-helpers($breakpoint);
+  //@include make-text-helpers($breakpoint);
 }

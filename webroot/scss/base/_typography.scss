@@ -1,13 +1,7 @@
-h1, h2, h3, h4, p, ul, ol, dl, dd, figure,
-pre, table, fieldset, hr {
-  margin: 0;
-  padding: 0;
-} // Reset
-
 //==========================================================================
 // Fließtext
 //==========================================================================
-@include typi-init;
+
 @include typi-base();
 
 body {
@@ -19,6 +13,7 @@ body {
 //==========================================================================
 // Headlines & Text Elements
 //==========================================================================
+
 h1, h2, h3 {
   font-family: $font-primary;
 }
@@ -51,9 +46,13 @@ h4, .h4 {
 // Vertical Rythm
 //==========================================================================
 
-p, figure,
+p, figure, blockquote,
 pre, table, fieldset, hr {
   margin-bottom: vr(1);
+}
+
+blockquote {
+  margin-left: vr(1);
 }
 
 ul, ol, dl, dd {

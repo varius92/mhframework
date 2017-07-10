@@ -1,4 +1,7 @@
+//==========================================================================
 // Helper for the grid align top
+//==========================================================================
+
 @mixin make-row-helpers($breakpoint) {
   .row--#{$breakpoint}-top {
     align-items: flex-start;
@@ -11,7 +14,10 @@
   }
 }
 
+//==========================================================================
 // Helper for the sorting the first item
+//==========================================================================
+
 @mixin make-col-helpers($breakpoint) {
   .col--#{$breakpoint}-align-top {
     align-self: flex-start;
@@ -32,45 +38,19 @@
   .col--#{$breakpoint}-reset {
     order: 0;
   }
+
   .row--#{$breakpoint}-reverse {
     flex-direction: row-reverse;
   }
+
   .col--#{$breakpoint}-flex {
     display: flex;
   }
 }
 
-//@mixin make-text-helpers($breakpoint) {
-//  .text--#{$breakpoint}-right {
-//    text-align: right;
-//  }
-//  .text--#{$breakpoint}-left {
-//    text-align: left;
-//  }
-//  .text--#{$breakpoint}-center {
-//    text-align: center;
-//  }
-//}
 
-@mixin make-hidden-visible-helpers($breakpoint) {
-  .u-hidden-#{$breakpoint} {
-    display: none;
-  }
-  .u-visible-#{$breakpoint} {
-    display: block;
-  }
-}
 
-@mixin make-sticky-helpers($breakpoint) {
-  .u-sticky-#{$breakpoint} {
-    position: fixed;
-  }
-}
-
-@mixin make-helpers($breakpoint) {
+@mixin make-grid-modifier($breakpoint) {
   @include make-row-helpers($breakpoint);
   @include make-col-helpers($breakpoint);
-  //@include make-text-helpers($breakpoint);
-  @include make-hidden-visible-helpers($breakpoint);
-  @include make-sticky-helpers($breakpoint);
 }

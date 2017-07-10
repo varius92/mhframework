@@ -63,7 +63,7 @@ $prefix-list: -webkit-, -moz-, -ms-, -o-, "";
 //==========================================================================
 
 @mixin breakpoint($args) {
-  @include mappy-bp($args){
+  @include mappy-bp($args) {
     @content
   }
 }

@@ -1,32 +1,24 @@
-@mixin placeholder-color($color)
-{
-  ::-moz-placeholder
-  {
+@mixin placeholder-color($color) {
+  ::-moz-placeholder {
     opacity: 1;
     color: $color;
   }
-  :-ms-input-placeholder
-  {
+  :-ms-input-placeholder {
     color: $color;
   }
-  ::-webkit-input-placeholder
-  {
+  ::-webkit-input-placeholder {
     color: $color;
   }
 }
 
-@mixin placeholder-padding($padding)
-{
-  ::-moz-placeholder
-  {
+@mixin placeholder-padding($padding) {
+  ::-moz-placeholder {
     padding: $padding;
   }
-  :-ms-input-placeholder
-  {
+  :-ms-input-placeholder {
     padding: $padding;
   }
-  ::-webkit-input-placeholder
-  {
+  ::-webkit-input-placeholder {
     padding: $padding;
   }
 }
