@@ -8,3 +8,11 @@ a {
 }
 
 
+/* remove yellow from chrome auto-fill background */
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  color: $color-gray-dark;
+  -webkit-text-fill-color: $color-gray-dark;
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
+}

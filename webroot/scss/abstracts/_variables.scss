@@ -4,21 +4,24 @@
 
 $color-primary: #3E50B4;
 $color-secondary: #FF3F80;
+
 $color-primary-hover: lighten($color-primary, 20%);
 $color-secondary-hover: lighten($color-secondary, 20%);
 
-$color-black: #000000;
-$color-gray-dark: #212121;
-$color-gray-mid: #616161;
-$color-gray: #b6b6b6;
-$color-gray-light: #EEEEEE;
 $color-white: #FFFFFF;
+$color-gray-lightest: #f6f6f6;
+$color-gray-lighter: #e4e4e4;
+$color-gray-light: #d3d3d3;
+$color-gray: #a8a8a8;
+$color-gray-dark: #7e7e7e;
+$color-gray-darker: #545454;
+$color-gray-darkest: #2a2a2a;
+$color-black: #000000;
 
 $color-error: #f03d3d;
 $color-success: #3dbe62;
 $color-warning: #f7ac32;
 $color-focus: #1c86f2;
-
 
 //==========================================================================
 // Font
@@ -27,7 +30,7 @@ $color-focus: #1c86f2;
 $font-base: 'Open Sans', sans-serif;
 $font-primary: 'Roboto', sans-serif;
 
-$text-color: $color-gray-mid;
+$text-color: $color-gray-dark;
 $text-weight: 300;
 
 //==========================================================================
@@ -103,13 +106,19 @@ $fa-font-path: "../scss/vendor/font-awesome/fonts";
 
 $global-radius: 0.2em;
 $global-transition: 200ms;
+$global-border-color: $color-gray-dark;
 
-$zindex-navbar: 500;
-$zindex-dropdown: 600;
-$zindex-sticky: 700;
-$zindex-modal: 800;
-$zindex-popover: 900;
-$zindex-tooltip: 1000;
+$z-index-0: -1;
+$z-index-1: 10;
+$z-index-2: 20;
+$z-index-3: 30;
+$z-index-4: 40;
+$z-index-5: 50;
+$z-index-6: 60;
+$z-index-7: 70;
+$z-index-8: 80;
+$z-index-9: 90;
+$z-index-10: 100;
 
 // @siehe _functions.scss
 $base-dir: 'webroot/';
