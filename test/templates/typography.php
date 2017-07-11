@@ -2,7 +2,7 @@
     <section id="typography">
         <div class="row">
             <div class="col">
-                <header class="text--center"><h3>Typography</h3></header>
+                <header class="text--center u-hidden-xs"><h3>Typography</h3></header>
                 <article>
                     <header class="text--center"><h4>Headings</h4></header>
                     <h1>Heading 1</h1>

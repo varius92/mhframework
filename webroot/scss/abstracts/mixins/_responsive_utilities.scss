@@ -1,0 +1,15 @@
+@mixin make-utilities($breakpoint, $columns) {
+  @include make-responsive-utilities($breakpoint);
+}
+
+@mixin create-utilitiy-classes($breakpoints, $columns) {
+  @each $breakpoint, $width in $breakpoints {
+    @if ($width == 0) {
+      @include make-utilities($breakpoint, $columns);
+    } @else {
+      @media (max-width: mappy-convert-to-em($width)) {
+        @include make-utilities($breakpoint, $columns);
+      }
+    }
+  }
+}

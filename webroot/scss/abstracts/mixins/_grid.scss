@@ -26,7 +26,6 @@
 
 @mixin make-grid-column($breakpoint, $columns) {
   @include make-grid-modifier($breakpoint);
-  @include make-responsive-utilities($breakpoint);
   .col--#{$breakpoint} {
     @include make-default();
     @include make-column($columns);

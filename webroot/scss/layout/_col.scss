@@ -11,3 +11,37 @@
     padding: 0;
   }
 }
+
+//==========================================================================
+// Modifier for the sorting the first item
+//==========================================================================
+
+@mixin make-col-modifier($breakpoint) {
+  .col--#{$breakpoint}-align-top {
+    align-self: flex-start;
+  }
+  .col--#{$breakpoint}-align-center {
+    align-self: center;
+  }
+  .col--#{$breakpoint}-align-bottom {
+    align-self: flex-end;
+  }
+
+  .col--#{$breakpoint}-first {
+    order: -1;
+  }
+  .col--#{$breakpoint}-last {
+    order: 1;
+  }
+  .col--#{$breakpoint}-reset {
+    order: 0;
+  }
+
+  .row--#{$breakpoint}-reverse {
+    flex-direction: row-reverse;
+  }
+
+  .col--#{$breakpoint}-flex {
+    display: flex;
+  }
+}

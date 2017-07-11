@@ -19,3 +19,21 @@
     margin: 0;
   }
 }
+
+//==========================================================================
+// Modifier for the grid align top
+//==========================================================================
+
+@mixin make-row-modifier($breakpoint) {
+  .row--#{$breakpoint}-top {
+    align-items: flex-start;
+  }
+  .row--#{$breakpoint}-center {
+    align-items: center;
+  }
+  .row--#{$breakpoint}-bottom {
+    align-items: flex-end;
+  }
+}
+
+

@@ -1,18 +1,4 @@
 //==========================================================================
-// Color
-//==========================================================================
-
-@each $name, $value in $color-map {
-  .u-color-#{$name} {
-    color: $value;
-  }
-  .u-bg-#{$name} {
-    background-color: $value;
-  }
-}
-
-
-//==========================================================================
 // Display
 //==========================================================================
 
@@ -45,9 +31,7 @@
 }
 
 //==========================================================================
-// Hide / Visible
-// --------------
-// @grid-helpers: make-hidden-visible-helpers($breakpoint);
+// Hide / Visible (responsive)
 //==========================================================================
 
 .u {
@@ -56,6 +40,29 @@
   }
   &-visible {
     display: block;
+  }
+}
+
+@mixin make-hidden-visible-utilities($breakpoint) {
+  .u-hidden-#{$breakpoint} {
+    display: none;
+  }
+  .u-visible-#{$breakpoint} {
+    display: block;
+  }
+}
+
+//==========================================================================
+// Sticky (responsive)
+//==========================================================================
+
+.u-sticky {
+  position: fixed;
+}
+
+@mixin make-sticky-utilities($breakpoint) {
+  .u-sticky-#{$breakpoint} {
+    position: fixed;
   }
 }
 
@@ -79,16 +86,6 @@
 }
 
 //==========================================================================
-// Sticky
-// --------------
-// @grid-helpers: make-sticky-helpers($breakpoint);
-//==========================================================================
-
-.u-sticky {
-  position: fixed;
-}
-
-//==========================================================================
 // Rounded
 //==========================================================================
 
@@ -107,40 +104,35 @@
 }
 
 //==========================================================================
-// Responsive utilities
+// Color
 //==========================================================================
 
-@mixin make-hidden-visible-helpers($breakpoint) {
-  .u-hidden-#{$breakpoint} {
-    display: none;
+$color-map: (
+      primary: $color-primary,
+      secondary: $color-secondary,
+      error: $color-error,
+      success: $color-success,
+      warning: $color-warning,
+      focus: $color-focus,
+);
+
+@each $name, $value in $color-map {
+  .u-color-#{$name} {
+    color: $value;
   }
-  .u-visible-#{$breakpoint} {
-    display: block;
+  .u-bg-#{$name} {
+    background-color: $value;
   }
 }
 
-@mixin make-sticky-helpers($breakpoint) {
-  .u-sticky-#{$breakpoint} {
-    position: fixed;
-  }
-}
-
-//@mixin make-text-helpers($breakpoint) {
-//  .text--#{$breakpoint}-right {
-//    text-align: right;
-//  }
-//  .text--#{$breakpoint}-left {
-//    text-align: left;
-//  }
-//  .text--#{$breakpoint}-center {
-//    text-align: center;
-//  }
-//}
-
-
+////////////////////////////////////////////////////////////////////////////
+//==========================================================================
+// Erstellt alle responsive Utility-Klassen
+//==========================================================================
 
 @mixin make-responsive-utilities($breakpoint) {
-  @include make-hidden-visible-helpers($breakpoint);
-  @include make-sticky-helpers($breakpoint);
-  //@include make-text-helpers($breakpoint);
+  @include make-hidden-visible-utilities($breakpoint);
+  @include make-sticky-utilities($breakpoint);
 }
+
+@include create-utilitiy-classes($grid-breakpoints, $grid-columns);

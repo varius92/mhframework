@@ -1,0 +1,10 @@
+//==========================================================================
+// Erstellt alle Grid Klassen & Modifier
+//==========================================================================
+
+@mixin make-grid-modifier($breakpoint) {
+  @include make-row-modifier($breakpoint);
+  @include make-col-modifier($breakpoint);
+}
+
+@include init($grid-breakpoints, $grid-columns);
