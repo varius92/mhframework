@@ -3,14 +3,30 @@
 //==========================================================================
 
 @mixin element($element) {
-  &__#{$element} {
-    @content;
+  $selector: &;
+  @if containsModifier($selector) {
+    $block: getBlock($selector);
+    @at-root {
+      #{$selector} {
+        #{$block+'__'+$element} {
+          @content;
+        }
+      }
+    }
+  } @else {
+    @at-root {
+      #{$selector+'__'+$element} {
+        @content;
+      }
+    }
   }
 }
 
 @mixin modifier($modifier) {
-  &--#{$modifier} {
-    @content;
+  @at-root {
+    #{&}#{'--'+$modifier} {
+      @content;
+    }
   }
 }
 
@@ -59,7 +75,7 @@ $prefix-list: -webkit-, -moz-, -ms-, -o-, "";
 }
 
 //==========================================================================
-// Alias für das mappy-breakpoint Mixin "mappy-bp"
+// Alias für das "mappy-bp" Mixin
 //==========================================================================
 
 @mixin breakpoint($args) {

@@ -1,11 +1,3 @@
-@mixin icon($modifier) {
-  &--#{$modifier} {
-    &:before {
-      @content;
-    }
-  }
-}
-
 .Icon {
   font-family: $icon-font;
   speak: none;
@@ -18,12 +10,24 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  &--bla{
+    display: block;
+  }
+  &--xxx {
+    display: flex;
+  }
+}
 
-  //==========================================================================
-  // Icons
-  //==========================================================================
+$icon-map: (
+      user: "\f000",
+      music: "\f001",
+      search: "\f002",
+      envelope-o: "\f003",
+      heart: "\f004"
+);
 
-  //@include icon(phone){
-  //  background: red;
-  //}
+@each $name, $icon in $icon-map {
+  .Icon--#{$name}:before {
+    content: $icon;
+  }
 }
