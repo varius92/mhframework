@@ -1,17 +1,3 @@
-.blockName {
-  @include element(elementName){
-    display: inline;
-  }
-  @include modifier(modifierName){
-    display: flex;
-    @include element(elementName){
-      display: block;
-    }
-  }
-}
-
-
-
 a {
   color: $color-primary;
   text-decoration: none;

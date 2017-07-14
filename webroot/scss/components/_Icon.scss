@@ -20,10 +20,8 @@
 
 $icon-map: (
       user: "\f000",
-      music: "\f001",
+      star: "\f001",
       search: "\f002",
-      envelope-o: "\f003",
-      heart: "\f004"
 );
 
 @each $name, $icon in $icon-map {

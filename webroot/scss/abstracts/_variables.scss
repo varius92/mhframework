@@ -2,7 +2,7 @@
 // Colors
 //==========================================================================
 
-$color-primary: #3E50B4;
+$color-primary: #72417f;
 $color-secondary: #FF3F80;
 
 $color-primary-hover: lighten($color-primary, 20%);
@@ -104,21 +104,22 @@ $fa-font-path: "../scss/vendor/font-awesome/fonts";
 // Global
 //==========================================================================
 
-$global-radius: 0.2em;
-$global-transition: 200ms;
+$global-radius: 0.3em;
+$global-transition-time: 200ms;
+$global-transition: all $global-transition-time ease-in-out;
 $global-border-color: $color-gray-dark;
 
 $z-index-0: -1;
-$z-index-1: 10;
-$z-index-2: 20;
-$z-index-3: 30;
-$z-index-4: 40;
-$z-index-5: 50;
-$z-index-6: 60;
-$z-index-7: 70;
-$z-index-8: 80;
-$z-index-9: 90;
-$z-index-10: 100;
+$z-index-1: 1;
+$z-index-2: 2;
+$z-index-3: 4;
+$z-index-4: 8;
+$z-index-5: 10;
+$z-index-6: 100;
+$z-index-7: 200;
+$z-index-8: 300;
+$z-index-9: 400;
+$z-index-10: 500;
 
 // @siehe _functions.scss
 $base-dir: 'webroot/';
