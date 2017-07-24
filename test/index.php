@@ -23,7 +23,16 @@ include_once '_helper.php';
 
 
 </head>
+<?php
+function code($content)
+{
+?>
+<pre><code class="language-markup"><?=htmlspecialchars($content)?>
+</code></pre>
+<?php
+}
 
+?>
 <body class="doc">
 <header>
 </header>

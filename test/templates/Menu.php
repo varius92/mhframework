@@ -611,44 +611,9 @@
                                                 obcaecati tempore, veniam.
                                             </div>
                                             <div class="col col--sm">
-                                                <!--MenuPrimary-->
-                                                <ul style="max-width: 184px"
-                                                    class="MenuPrimary MenuPrimary--vertical-inline">
-                                                    <li class="MenuPrimary__Item">
-                                                        <a class="MenuPrimary__Link"
-                                                           href="#/">One</a>
-                                                    </li>
-                                                    <li class="MenuPrimary__Item">
-                                                        <a class="MenuPrimary__Link"
-                                                           href="#/">Two</a>
-                                                    </li>
-                                                    <li class="MenuPrimary__Item Dropdown">
-                                                        <a class="MenuPrimary__Link Dropdown__Toggle"
-                                                           href="#/">Three</a>
-                                                        <div class="MenuPrimary__Children Dropdown__Container">
-                                                            <!--MenuSecondary-->
-                                                            <ul class="MenuSecondary MenuSecondary--vertical-inline">
-                                                                <li class="MenuSecondary__Item">
-                                                                    <a class="MenuSecondary__Link"
-                                                                       href="#/">One</a>
-                                                                </li>
-                                                                <li class="MenuSecondary__Item">
-                                                                    <a class="MenuSecondary__Link"
-                                                                       href="#/">Two</a>
-                                                                </li>
-                                                                <li class="MenuSecondary__Item">
-                                                                    <a class="MenuSecondary__Link"
-                                                                       href="#/">Three</a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </li>
-                                                    <li class="MenuPrimary__Item">
-                                                        <a class="MenuPrimary__Link"
-                                                           href="#/">Four</a>
-                                                    </li>
-                                                </ul>
-                                                <!--//-----------------------//-->
+                                                <img src="http://dummy-images.com/abstract/dummy-200x200-Stripes.jpg"
+                                                     alt=""
+                                                     class="u-img-responsive">
                                             </div>
                                             <div class="col col--sm u-text-justify">
                                                 Animi olos distinctio ducimus
