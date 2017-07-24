@@ -1,0 +1,65 @@
+$Dropdown-icon: $fa-var-caret-down; // false (wenn kein Icon nötig ist)
+
+//==========================================================================
+// Placeholder
+//==========================================================================
+
+%Dropdown-Icon {
+  &:after {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-size: .8rem;
+    content: $Dropdown-icon;
+    color: $color-black;
+    pointer-events: none;
+    margin-left: 0.4em;
+    transition: $global-transition;
+    opacity: .3;
+  }
+}
+
+//==========================================================================
+// Block
+//==========================================================================
+
+.Dropdown {
+  //==========================================================================
+  // Elements
+  //==========================================================================
+  @include element(Container) {
+    display: none;
+    position: absolute;
+    @include modifier(fluid){
+      @include breakpoint($grid-float-breakpoint){
+        display: block !important;
+        position: relative;
+      }
+    }
+  }
+
+  @include element(Toggle) {
+    @if $Dropdown-icon {
+      @extend %Dropdown-Icon;
+      @include when-inside('.Dropdown--open >') {
+        &:after {
+          opacity: 1;
+          color: $color-primary;
+        }
+      }
+    }
+  }
+
+  //==========================================================================
+  // Modifier
+  //==========================================================================
+
+  @include modifier(mega) {
+    position: static;
+    @include element(Container) {
+      left:0;
+      right: 0;
+      //padding: $grid-gutter/2 $grid-gutter;
+    }
+  }
+
+}

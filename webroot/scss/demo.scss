@@ -1,4 +1,7 @@
-@import "../../webroot/scss/main";
+
+$color-block: orange;
+$color-elem: #228843;
+$color-mod: #ab345c;
 
 .doc {
   hr {
@@ -7,7 +10,8 @@
     border: none;
     height: 1px;
     background: #7b7b7b;
-    opacity: 0;
+    opacity: .1;
+    width: 50%;
   }
   small {
     font-size: .5em;
@@ -52,6 +56,38 @@
       }
     }
   }
+
+  .mod-block, .elm-block {
+    margin-bottom: vr(3);
+    pre:not(.language-markup) {
+      code {
+        padding: .4rem .6rem;
+        color: $color-white;
+        font-size: 1rem;
+        background-color: $color-mod;
+      }
+    }
+  }
+  .elm-block {
+    pre:not(.language-markup) code {
+      background-color: $color-elem;
+    }
+  }
+  .only-style {
+    .Demo__header {
+      padding: 1rem 1.5rem !important;
+      background-color: white;
+      pre {
+        margin: 0;
+      }
+    }
+    .Demo__toggle-btn {
+      top: 18px !important;
+      left: 210px;
+      right: auto !important;
+    }
+  }
+
   //==========================================================================
   // Demo Block
   //==========================================================================
@@ -66,18 +102,7 @@
       padding: 2rem vr(1);
       transition: .25s cubic-bezier(0.18, 0.89, 0.32, 1.28);
       z-index: 2;
-      &:after {
-        transition: .25s cubic-bezier(0.18, 0.89, 0.32, 1.28);
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 1px;
-        background-color: #141414;
-        z-index: -1;
-        border-radius: .5em .5em 0 0;
-      }
+
     }
     .Demo__header--dark {
       background-color: transparent;
@@ -125,6 +150,41 @@
     .row {
       padding: 0;
       margin: 0;
+    }
+  }
+
+  .Demo--toggle {
+    position: relative;
+    .Demo__footer {
+      position: relative;
+      height: auto;
+      overflow: hidden;
+    }
+    .Demo__footer--active {
+      height: auto;
+      .Demo__toggle-btn {
+        transform: rotate(-180deg);
+        opacity: .8;
+      }
+    }
+    .Demo__toggle-btn {
+      position: absolute;
+      font-size: 1.1rem;
+      margin: 0 auto;
+      text-align: center;
+      top: .1rem;
+      cursor: pointer;
+      color: #6d6d6d;
+      opacity: .3;
+      right: .4rem;
+      z-index: 2;
+      transition: $global-transition;
+      @include modifier(active){
+        opacity: 1;
+      }
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 

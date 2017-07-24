@@ -1,0 +1,109 @@
+$Menu-background: $color-white;
+$Menu-Item-background: $color-white;
+$Menu-Link-padding: 0.5em vr(1);
+$Menu-Dropdown-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+
+//==========================================================================
+// Block
+//==========================================================================
+
+.Menu {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  position: relative;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  background-color: $Menu-background;
+
+  //==========================================================================
+  // Elements
+  //==========================================================================
+
+  @include element(Item) {
+    position: relative;
+    transition: $global-transition;
+  }
+
+  @include element(Link) {
+    display: block;
+    padding: $Menu-Link-padding;
+    white-space: nowrap;
+
+    @include on-event(true) {
+      text-decoration: none;
+    }
+  }
+
+  /* Cross Component Style: Dropdown__Container */
+  @include element(Children) {
+    box-shadow: $Menu-Dropdown-shadow;
+    background: $Menu-background;
+  }
+
+  @include element(Toggle) {
+    &:before {
+      font-family: FontAwesome;
+      content: $fa-var-bars;
+      display: inline-block;
+    }
+
+    @include breakpoint($grid-float-breakpoint) {
+      display: none;
+    }
+  }
+
+  //==========================================================================
+  // Modifier
+  //==========================================================================
+
+  @include modifier(mobile) {
+    @include breakpoint(max $grid-float-breakpoint) {
+      flex-direction: column;
+    }
+  }
+
+  @include modifier(right) {
+    justify-content: flex-end;
+
+    @include element(Item) {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  @include modifier(center) {
+    justify-content: center;
+
+    @include element(Item) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  @include modifier(expand) {
+
+    @include element(Item) {
+      flex: 1 1 0;
+    }
+  }
+
+  @include modifier(vertical) {
+    flex-direction: column;
+
+    @include element(Children) {
+      left: 100%;
+      top: 0;
+    }
+  }
+
+  @include modifier(vertical-inline) {
+    flex-direction: column;
+
+    @include element(Children) {
+      position: relative;
+      box-shadow: none;
+    }
+  }
+}

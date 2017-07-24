@@ -19,7 +19,7 @@
                             <span class="slider round"></span>
                         </label>
                         <a class="Button" href="#">Link</a>
-                        <span class="Button" href="#">Link</span>
+                        <span class="Button" href="#">Span</span>
                         <button class="Button" type="submit">Button</button>
                         <input class="Button" type="button" value="Input">
                         <input class="Button" type="submit" value="Submit">

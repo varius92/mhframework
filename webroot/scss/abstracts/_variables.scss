@@ -2,8 +2,8 @@
 // Colors
 //==========================================================================
 
-$color-primary: #72417f;
-$color-secondary: #FF3F80;
+$color-primary: #5a3364;
+$color-secondary: #a62953;
 
 $color-primary-hover: lighten($color-primary, 20%);
 $color-secondary-hover: lighten($color-secondary, 20%);
@@ -76,16 +76,16 @@ $ms-ratio: 2;
 // Responsiveness & Grid
 //==========================================================================
 
-$grid-columns: 12;
-$grid-gutter: vr(1);
-$grid-container-width: 50em;
-
 $grid-breakpoints: (
       xs: 480px,
       sm: 768px,
       md: 992px,
       lg: 1200px
 );
+$grid-columns: 12;
+$grid-gutter: vr(1);
+$grid-container-width: 50em;
+$grid-float-breakpoint: map_get($grid-breakpoints, 'sm');
 
 //==========================================================================
 // Icons
@@ -98,7 +98,8 @@ $icon-font: 'icomoon';
 $fa-css-prefix: Icon-fa;
 $fa-font-size-base: 1rem;
 $fa-line-height-base: vr(1);
-$fa-font-path: "../scss/vendor/font-awesome/fonts";
+//$fa-font-path: "../scss/vendor/font-awesome/fonts";
+$fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.7.0/fonts"; // for referencing Bootstrap CDN font files directly
 
 //==========================================================================
 // Global
