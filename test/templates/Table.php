@@ -1,4 +1,5 @@
 <div class="component-demo">
+
     <!-- MENU -->
     <ul class="Menu Menu--vertical Menu--right Menu--demo-component">
         <li class="Menu__Item">
@@ -11,6 +12,7 @@
             <a href="#top" class="Menu__Link backtotop">Back to top</a>
         </li>
     </ul>
+
     <!-- INTRO -->
     <div id="intro" class="grid grid--container">
         <div class="row">
@@ -18,7 +20,7 @@
                 <article>
                     <h1>
                         <small>COMPONENT</small>
-                        Button
+                        Table
                     </h1>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -48,28 +50,13 @@
         </div>
     </div>
 
+
     <!-- ELEMENTS -->
-    <div id="elements" class="Info-row Info-row--empty">
+    <div id="elements" class="Info-row">
         <div class="grid grid--container">
             <div class="row">
                 <div class="col">
                     <h3>ELEMENTS</h3>
-                    <!-- SelectorTable -->
-                    <p>
-                    <pre>keine vorhanden</pre>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- MODIFIER -->
-    <div id="modifier" class="Info-row">
-        <div class="grid grid--container">
-            <div class="row">
-                <div class="col">
-                    <h3>MODIFIER</h3>
-
                     <!-- SelectorTable -->
                     <div class="SelectorTable">
                         <table class="Table Table--border-rows Table--demo">
@@ -85,13 +72,153 @@
                             <!--Row-->
                             <tr class="Table__Row">
                                 <td class="Table__Cell">
-                                    <a href="#mod-round"
+                                    .Table__Header
+                                </td>
+                                <td class="Table__Cell">
+                                    /
+                                </td>
+                                <td class="Table__Cell">
+                                    <code>&lt;thead&gt;</code>
+                                </td>
+                            </tr>
+
+                            <!--Row-->
+                            <tr class="Table__Row">
+                                <td class="Table__Cell">
+                                    .Table__Body
+                                </td>
+                                <td class="Table__Cell">
+                                    /
+                                </td>
+                                <td class="Table__Cell">
+                                    <code>&lt;tbody&gt;</code>
+                                </td>
+                            </tr>
+
+                            <!--Row-->
+                            <tr class="Table__Row">
+                                <td class="Table__Cell">
+                                    .Table__Footer
+                                </td>
+                                <td class="Table__Cell">
+                                    /
+                                </td>
+                                <td class="Table__Cell">
+                                    <code>&lt;tfooter&gt;</code>
+                                </td>
+                            </tr>
+
+                            <!--Row-->
+                            <tr class="Table__Row">
+                                <td class="Table__Cell">
+                                    .Table__Row
+                                </td>
+                                <td class="Table__Cell">
+                                    /
+                                </td>
+                                <td class="Table__Cell">
+                                    <code>&lt;tr&gt;</code>
+                                </td>
+                            </tr>
+
+                            <!--Row-->
+                            <tr class="Table__Row">
+                                <td class="Table__Cell">
+                                    .Table__Cell
+                                </td>
+                                <td class="Table__Cell">
+                                    /
+                                </td>
+                                <td class="Table__Cell">
+                                    <code>&lt;td&gt;</code>
+                                </td>
+                            </tr>
+
+                            <!--Row-->
+                            <tr class="Table__Row">
+                                <td class="Table__Cell">
+                                    <a href="#el-responsive"
                                        class="Button Button--link Button--example">
-                                        .Button--round
+                                        .Table__Responsive
                                     </a>
                                 </td>
                                 <td class="Table__Cell">
-                                    Adds a rounded border.
+                                    To make a table
+                                    responsive
+                                    wrap the <code>&lt;table&gt;</code> in a
+                                    div with that class.
+                                </td>
+                                <td class="Table__Cell">
+                                    <code>&lt;div&gt;</code>
+                                </td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ELEMENTS EXAMPLES -->
+    <div class="grid grid--container examples-row">
+        <h4>Examples</h4>
+        <br>
+
+        <!-- Example -->
+        <div class="row example-block" id="el-responsive">
+            <div class="col">
+                <div class="example__title">
+                    # Responsive Table
+                </div>
+                <div class="Demo Demo--toggle">
+                    <div class="Demo__header">
+                        <?php
+                        demo('__Responsive')
+                        ?>
+                    </div>
+                    <i class="Icon-fa Icon-fa-code Demo__toggle-btn"></i>
+                    <div class="Demo__footer">
+                        <?php
+                        code('__Responsive')
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- MODIFIER -->
+    <div id="modifier" class="Info-row">
+        <div class="grid grid--container">
+            <div class="row">
+                <div class="col">
+                    <h3>MODIFIER</h3>
+                    <!-- SelectorTable -->
+                    <div class="SelectorTable">
+                        <table class="Table Table--border-rows Table--demo">
+                            <thead class="Table__Header">
+                            <tr class="Table__Row">
+                                <th class="Table__Cell">SELECTOR</th>
+                                <th class="Table__Cell">DESCRIPTION</th>
+                                <th class="Table__Cell">TAG</th>
+                            </tr>
+                            </thead>
+                            <tbody class="Table__Body">
+
+                            <!--Row-->
+                            <tr class="Table__Row">
+                                <td class="Table__Cell">
+                                    <a href="#mod-striped"
+                                       class="Button Button--link Button--example">
+                                        .Table--striped
+                                    </a>
+                                </td>
+                                <td class="Table__Cell">
+                                    Adds "Zebra-Striping" rows.
                                 </td>
                                 <td class="Table__Cell">
                                     /
@@ -101,14 +228,13 @@
                             <!--Row-->
                             <tr class="Table__Row">
                                 <td class="Table__Cell">
-                                    <a href="#mod-ghost"
+                                    <a href="#mod-border-rows"
                                        class="Button Button--link Button--example">
-                                        .Button--ghost
+                                        .Table--border-rows
                                     </a>
                                 </td>
                                 <td class="Table__Cell">
-                                    Adds a solid border and tranparent
-                                    Background.
+                                    Adds bottom-border to rows.
                                 </td>
                                 <td class="Table__Cell">
                                     /
@@ -118,18 +244,19 @@
                             <!--Row-->
                             <tr class="Table__Row">
                                 <td class="Table__Cell">
-                                    <a href="#mod-link"
+                                    <a href="#mod-border-cells"
                                        class="Button Button--link Button--example">
-                                        .Button--link
+                                        .Table--border-cells
                                     </a>
                                 </td>
                                 <td class="Table__Cell">
-                                    Makes the button look like a link.
+                                    Adds border to cells.
                                 </td>
                                 <td class="Table__Cell">
                                     /
                                 </td>
                             </tr>
+
 
                             </tbody>
                         </table>
@@ -143,22 +270,23 @@
     <div class="grid grid--container examples-row">
         <h4>Examples</h4>
         <br>
+
         <!-- Example -->
-        <div class="row example-block" id="mod-round">
+        <div class="row example-block" id="mod-striped">
             <div class="col">
                 <div class="example__title">
-                    # Button--round
+                    # Table--striped
                 </div>
                 <div class="Demo Demo--toggle">
                     <div class="Demo__header">
                         <?php
-                        demo('--round')
+                        demo('--striped')
                         ?>
                     </div>
                     <i class="Icon-fa Icon-fa-code Demo__toggle-btn"></i>
                     <div class="Demo__footer">
                         <?php
-                        code('--round')
+                        code('--striped')
                         ?>
                     </div>
                 </div>
@@ -166,21 +294,21 @@
         </div>
 
         <!-- Example -->
-        <div class="row example-block" id="mod-ghost">
+        <div class="row example-block" id="mod-border-rows">
             <div class="col">
                 <div class="example__title">
-                    # Button--ghost
+                    # Table--border-rows
                 </div>
                 <div class="Demo Demo--toggle">
                     <div class="Demo__header">
                         <?php
-                        demo('--ghost')
+                        demo('--border-rows')
                         ?>
                     </div>
                     <i class="Icon-fa Icon-fa-code Demo__toggle-btn"></i>
                     <div class="Demo__footer">
                         <?php
-                        code('--ghost')
+                        code('--border-rows')
                         ?>
                     </div>
                 </div>
@@ -188,21 +316,21 @@
         </div>
 
         <!-- Example -->
-        <div class="row example-block" id="mod-link">
+        <div class="row example-block" id="mod-border-cells">
             <div class="col">
                 <div class="example__title">
-                    # Button--link
+                    # Table--border-cells
                 </div>
                 <div class="Demo Demo--toggle">
                     <div class="Demo__header">
                         <?php
-                        demo('--link')
+                        demo('--border-cells')
                         ?>
                     </div>
                     <i class="Icon-fa Icon-fa-code Demo__toggle-btn"></i>
                     <div class="Demo__footer">
                         <?php
-                        code('--link')
+                        code('--border-cells')
                         ?>
                     </div>
                 </div>

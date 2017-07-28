@@ -1,3 +1,20 @@
+
+$icon-map: (
+      user: "\f000",
+      star: "\f001",
+      search: "\f002",
+);
+
+@each $name, $icon in $icon-map {
+  .Icon--#{$name}:before {
+    content: $icon;
+  }
+}
+
+//==========================================================================
+// Block
+//==========================================================================
+
 .Icon {
   font-family: $icon-font;
   speak: none;
@@ -12,14 +29,3 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-$icon-map: (
-      user: "\f000",
-      star: "\f001",
-      search: "\f002",
-);
-
-@each $name, $icon in $icon-map {
-  .Icon--#{$name}:before {
-    content: $icon;
-  }
-}

@@ -1,3 +1,4 @@
+
 $Dropdown-icon: $fa-var-caret-down; // false (wenn kein Icon nötig ist)
 
 //==========================================================================
@@ -58,7 +59,7 @@ $Dropdown-icon: $fa-var-caret-down; // false (wenn kein Icon nötig ist)
     @include element(Container) {
       left:0;
       right: 0;
-      //padding: $grid-gutter/2 $grid-gutter;
+      padding: $grid-gutter $grid-gutter/2 $grid-gutter/2 $grid-gutter/2;
     }
   }
 

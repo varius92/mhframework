@@ -1,4 +1,5 @@
 <div class="component-demo">
+
     <!-- MENU -->
     <ul class="Menu Menu--vertical Menu--right Menu--demo-component">
         <li class="Menu__Item">
@@ -11,6 +12,7 @@
             <a href="#top" class="Menu__Link backtotop">Back to top</a>
         </li>
     </ul>
+
     <!-- INTRO -->
     <div id="intro" class="grid grid--container">
         <div class="row">
@@ -18,7 +20,7 @@
                 <article>
                     <h1>
                         <small>COMPONENT</small>
-                        Button
+                        Headline
                     </h1>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -48,28 +50,13 @@
         </div>
     </div>
 
+
     <!-- ELEMENTS -->
-    <div id="elements" class="Info-row Info-row--empty">
+    <div id="elements" class="Info-row">
         <div class="grid grid--container">
             <div class="row">
                 <div class="col">
                     <h3>ELEMENTS</h3>
-                    <!-- SelectorTable -->
-                    <p>
-                    <pre>keine vorhanden</pre>
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- MODIFIER -->
-    <div id="modifier" class="Info-row">
-        <div class="grid grid--container">
-            <div class="row">
-                <div class="col">
-                    <h3>MODIFIER</h3>
-
                     <!-- SelectorTable -->
                     <div class="SelectorTable">
                         <table class="Table Table--border-rows Table--demo">
@@ -85,49 +72,88 @@
                             <!--Row-->
                             <tr class="Table__Row">
                                 <td class="Table__Cell">
-                                    <a href="#mod-round"
+                                    <a href="#el-"
                                        class="Button Button--link Button--example">
-                                        .Button--round
+                                        .Selector
                                     </a>
-                                </td>
-                                <td class="Table__Cell">
-                                    Adds a rounded border.
                                 </td>
                                 <td class="Table__Cell">
                                     /
                                 </td>
+                                <td class="Table__Cell">
+                                    <code>&lt;tag&gt;</code>
+                                </td>
                             </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ELEMENTS EXAMPLES -->
+    <div class="grid grid--container examples-row">
+        <h4>Examples</h4>
+        <br>
+
+        <!-- Example -->
+        <div class="row example-block" id="EXAMPLE1">
+            <div class="col">
+                <div class="example__title">
+                    # Examplename
+                </div>
+                <div class="Demo Demo--toggle">
+                    <div class="Demo__header">
+                        <?php
+                        demo('element')
+                        ?>
+                    </div>
+                    <i class="Icon-fa Icon-fa-code Demo__toggle-btn"></i>
+                    <div class="Demo__footer">
+                        <?php
+                        code('element')
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- MODIFIER -->
+    <div id="modifier" class="Info-row">
+        <div class="grid grid--container">
+            <div class="row">
+                <div class="col">
+                    <h3>MODIFIER</h3>
+                    <!-- SelectorTable -->
+                    <div class="SelectorTable">
+                        <table class="Table Table--border-rows Table--demo">
+                            <thead class="Table__Header">
+                            <tr class="Table__Row">
+                                <th class="Table__Cell">SELECTOR</th>
+                                <th class="Table__Cell">DESCRIPTION</th>
+                                <th class="Table__Cell">TAG</th>
+                            </tr>
+                            </thead>
+                            <tbody class="Table__Body">
 
                             <!--Row-->
                             <tr class="Table__Row">
                                 <td class="Table__Cell">
-                                    <a href="#mod-ghost"
+                                    <a href="#mod-"
                                        class="Button Button--link Button--example">
-                                        .Button--ghost
+                                        .Selector
                                     </a>
-                                </td>
-                                <td class="Table__Cell">
-                                    Adds a solid border and tranparent
-                                    Background.
                                 </td>
                                 <td class="Table__Cell">
                                     /
                                 </td>
-                            </tr>
-
-                            <!--Row-->
-                            <tr class="Table__Row">
                                 <td class="Table__Cell">
-                                    <a href="#mod-link"
-                                       class="Button Button--link Button--example">
-                                        .Button--link
-                                    </a>
-                                </td>
-                                <td class="Table__Cell">
-                                    Makes the button look like a link.
-                                </td>
-                                <td class="Table__Cell">
-                                    /
+                                    <code>&lt;tag&gt;</code>
                                 </td>
                             </tr>
 
@@ -144,65 +170,21 @@
         <h4>Examples</h4>
         <br>
         <!-- Example -->
-        <div class="row example-block" id="mod-round">
+        <div class="row example-block" id="EXAMPLE1">
             <div class="col">
                 <div class="example__title">
-                    # Button--round
+                    # Examplename
                 </div>
                 <div class="Demo Demo--toggle">
                     <div class="Demo__header">
                         <?php
-                        demo('--round')
+                        demo('modifier')
                         ?>
                     </div>
                     <i class="Icon-fa Icon-fa-code Demo__toggle-btn"></i>
                     <div class="Demo__footer">
                         <?php
-                        code('--round')
-                        ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Example -->
-        <div class="row example-block" id="mod-ghost">
-            <div class="col">
-                <div class="example__title">
-                    # Button--ghost
-                </div>
-                <div class="Demo Demo--toggle">
-                    <div class="Demo__header">
-                        <?php
-                        demo('--ghost')
-                        ?>
-                    </div>
-                    <i class="Icon-fa Icon-fa-code Demo__toggle-btn"></i>
-                    <div class="Demo__footer">
-                        <?php
-                        code('--ghost')
-                        ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Example -->
-        <div class="row example-block" id="mod-link">
-            <div class="col">
-                <div class="example__title">
-                    # Button--link
-                </div>
-                <div class="Demo Demo--toggle">
-                    <div class="Demo__header">
-                        <?php
-                        demo('--link')
-                        ?>
-                    </div>
-                    <i class="Icon-fa Icon-fa-code Demo__toggle-btn"></i>
-                    <div class="Demo__footer">
-                        <?php
-                        code('--link')
+                        code('modifer')
                         ?>
                     </div>
                 </div>

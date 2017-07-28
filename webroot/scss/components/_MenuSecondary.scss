@@ -1,5 +1,5 @@
+
 $MenuSecondary-background: $color-white;
-$MenuSecondary-Item-background: $color-white;
 $MenuSecondary-Link-padding: 0.5em vr(1);
 $MenuSecondary-Dropdown-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
 
@@ -20,10 +20,20 @@ $MenuSecondary-Dropdown-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
   //==========================================================================
   // Elements
   //==========================================================================
+  &--mod {
 
-  @include element(Item) {
+  }
+
+  &__elemt3 {
+
+  }
+
+  @include element('Item') {
     position: relative;
     transition: $global-transition;
+    @include modifier('mongo'){
+      display: block;
+    }
   }
 
   @include element(Link) {
@@ -74,7 +84,7 @@ $MenuSecondary-Dropdown-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
   @include modifier(vertical) {
     flex-direction: column;
 
-    @include element(Children){
+    @include element(Children) {
       left: 100%;
       top: 0;
     }
@@ -83,7 +93,7 @@ $MenuSecondary-Dropdown-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
   @include modifier(vertical-inline) {
     flex-direction: column;
 
-    @include element(Children){
+    @include element(Children) {
       position: relative;
       box-shadow: none;
     }

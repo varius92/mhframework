@@ -4,9 +4,6 @@
  .Dropdown__Container: Dropdown Target
  */
 
-
-// Dropdown
-
 var Transition_time = 300,
     Transition_type = "swing";
 
@@ -28,7 +25,7 @@ $('.Dropdown').each(function (e) {
 
 // Jeder Klick innerhalb des HTML Dokumentes versteckt den Dropdown-Container
 $(document).click(function () {
-    $(".Dropdown__Container").slideUp();
+    $(".Dropdown--open .Dropdown__Container").slideUp();
     $('.Dropdown--open').removeClass('Dropdown--open');
 });
 

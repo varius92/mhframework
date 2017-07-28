@@ -38,3 +38,4 @@ $base-dir: 'root/' !default;
 @function font($path, $base: $base-dir) {
   @return asset($base, 'fonts/', $path);
 }
+

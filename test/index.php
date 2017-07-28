@@ -24,27 +24,29 @@ include_once '_helper.php';
 
 </head>
 <?php
-function code($content)
+function demo($class = '', $zusatz = '')
 {
-?>
-<pre><code class="language-markup"><?=htmlspecialchars($content)?>
-</code></pre>
-<?php
+    include_once 'components/'.$_GET['s'].$zusatz.'/'.$_GET['s'].$class.'.html';
+}
+function code($class = '', $zusatz = '')
+{
+    echo '<pre data-src="components/'.$_GET['s'].$zusatz.'/'.$_GET['s'].$class.'.html">
+                       </pre>';
 }
 
 ?>
-<body class="doc">
+<body class="doc" id="top">
 <header>
 </header>
 <sidebar>
-    <div class="test-navbar">
-        <ul>
+    <div class="Doc-Navbar">
+        <ul class="Menu Menu--vertical-inline Doc-Menu">
             <?php
             foreach ($sites as $site) {
-                $link = '<a href="';
+                $link = '<a class="Menu__Link" href="';
                 $link .= 'index.php?s='.$site.'">';
                 $link .= $site.'</a>';
-                echo '<li>'.$link.'</li>';
+                echo '<li class="Menu__Item">'.$link.'</li>';
             }
             ?>
         </ul>

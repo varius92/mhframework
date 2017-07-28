@@ -1,7 +1,10 @@
-//$button-padding: .5em 1em;
-//$button-text-align: center;
-$button-radius: $global-radius;
+
+$button-radius: 0.2em;
 $button-transition: $global-transition;
+
+//==========================================================================
+// Block
+//==========================================================================
 
 .Button {
   display: inline-block;
@@ -35,7 +38,7 @@ $button-transition: $global-transition;
   // Modifier
   //==========================================================================
 
-  @include modifier(outline) {
+  @include modifier('ghost') {
     background-color: transparent;
     border-width: .1em;
     border-style: solid;
@@ -46,11 +49,11 @@ $button-transition: $global-transition;
     }
   }
 
-  @include modifier(round) {
+  @include modifier('round') {
     border-radius: $button-radius;
   }
 
-  @include modifier(ghost) {
+  @include modifier('link') {
     background-color: transparent;
     color: $color-primary;
     border: none;
