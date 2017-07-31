@@ -64,7 +64,6 @@
                             <tr class="Table__Row">
                                 <th class="Table__Cell">SELECTOR</th>
                                 <th class="Table__Cell">DESCRIPTION</th>
-                                <th class="Table__Cell">TAG</th>
                             </tr>
                             </thead>
                             <tbody class="Table__Body">
@@ -79,9 +78,6 @@
                                 </td>
                                 <td class="Table__Cell">
                                     /
-                                </td>
-                                <td class="Table__Cell">
-                                    <code>&lt;tag&gt;</code>
                                 </td>
                             </tr>
 
@@ -136,7 +132,6 @@
                             <tr class="Table__Row">
                                 <th class="Table__Cell">SELECTOR</th>
                                 <th class="Table__Cell">DESCRIPTION</th>
-                                <th class="Table__Cell">TAG</th>
                             </tr>
                             </thead>
                             <tbody class="Table__Body">
@@ -151,9 +146,6 @@
                                 </td>
                                 <td class="Table__Cell">
                                     /
-                                </td>
-                                <td class="Table__Cell">
-                                    <code>&lt;tag&gt;</code>
                                 </td>
                             </tr>
 

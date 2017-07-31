@@ -1,4 +1,3 @@
-
 $Menu-background: $color-white;
 $Menu-Link-padding: 0.5em vr(1);
 $Menu-Dropdown-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
@@ -15,6 +14,7 @@ $Menu-Dropdown-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+  z-index: 1;
 
   //==========================================================================
   // Elements

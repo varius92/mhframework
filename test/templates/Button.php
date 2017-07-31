@@ -77,7 +77,6 @@
                             <tr class="Table__Row">
                                 <th class="Table__Cell">SELECTOR</th>
                                 <th class="Table__Cell">DESCRIPTION</th>
-                                <th class="Table__Cell">TAG</th>
                             </tr>
                             </thead>
                             <tbody class="Table__Body">
@@ -93,9 +92,6 @@
                                 <td class="Table__Cell">
                                     Adds a rounded border.
                                 </td>
-                                <td class="Table__Cell">
-                                    /
-                                </td>
                             </tr>
 
                             <!--Row-->
@@ -110,9 +106,6 @@
                                     Adds a solid border and tranparent
                                     Background.
                                 </td>
-                                <td class="Table__Cell">
-                                    /
-                                </td>
                             </tr>
 
                             <!--Row-->
@@ -125,9 +118,6 @@
                                 </td>
                                 <td class="Table__Cell">
                                     Makes the button look like a link.
-                                </td>
-                                <td class="Table__Cell">
-                                    /
                                 </td>
                             </tr>
 

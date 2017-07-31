@@ -64,7 +64,6 @@
                             <tr class="Table__Row">
                                 <th class="Table__Cell">SELECTOR</th>
                                 <th class="Table__Cell">DESCRIPTION</th>
-                                <th class="Table__Cell">TAG</th>
                             </tr>
                             </thead>
                             <tbody class="Table__Body">
@@ -77,9 +76,6 @@
                                 <td class="Table__Cell">
                                     /
                                 </td>
-                                <td class="Table__Cell">
-                                    <code>&lt;thead&gt;</code>
-                                </td>
                             </tr>
 
                             <!--Row-->
@@ -89,9 +85,6 @@
                                 </td>
                                 <td class="Table__Cell">
                                     /
-                                </td>
-                                <td class="Table__Cell">
-                                    <code>&lt;tbody&gt;</code>
                                 </td>
                             </tr>
 
@@ -103,9 +96,6 @@
                                 <td class="Table__Cell">
                                     /
                                 </td>
-                                <td class="Table__Cell">
-                                    <code>&lt;tfooter&gt;</code>
-                                </td>
                             </tr>
 
                             <!--Row-->
@@ -116,9 +106,6 @@
                                 <td class="Table__Cell">
                                     /
                                 </td>
-                                <td class="Table__Cell">
-                                    <code>&lt;tr&gt;</code>
-                                </td>
                             </tr>
 
                             <!--Row-->
@@ -128,9 +115,6 @@
                                 </td>
                                 <td class="Table__Cell">
                                     /
-                                </td>
-                                <td class="Table__Cell">
-                                    <code>&lt;td&gt;</code>
                                 </td>
                             </tr>
 
@@ -147,9 +131,6 @@
                                     responsive
                                     wrap the <code>&lt;table&gt;</code> in a
                                     div with that class.
-                                </td>
-                                <td class="Table__Cell">
-                                    <code>&lt;div&gt;</code>
                                 </td>
                             </tr>
 
@@ -204,7 +185,6 @@
                             <tr class="Table__Row">
                                 <th class="Table__Cell">SELECTOR</th>
                                 <th class="Table__Cell">DESCRIPTION</th>
-                                <th class="Table__Cell">TAG</th>
                             </tr>
                             </thead>
                             <tbody class="Table__Body">
@@ -220,9 +200,6 @@
                                 <td class="Table__Cell">
                                     Adds "Zebra-Striping" rows.
                                 </td>
-                                <td class="Table__Cell">
-                                    /
-                                </td>
                             </tr>
 
                             <!--Row-->
@@ -236,9 +213,6 @@
                                 <td class="Table__Cell">
                                     Adds bottom-border to rows.
                                 </td>
-                                <td class="Table__Cell">
-                                    /
-                                </td>
                             </tr>
 
                             <!--Row-->
@@ -251,9 +225,6 @@
                                 </td>
                                 <td class="Table__Cell">
                                     Adds border to cells.
-                                </td>
-                                <td class="Table__Cell">
-                                    /
                                 </td>
                             </tr>
 
