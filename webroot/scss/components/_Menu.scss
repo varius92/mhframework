@@ -8,7 +8,7 @@ $Menu-Dropdown-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
 
 .Menu {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   flex-direction: row;
   position: relative;
   padding-left: 0;
@@ -20,12 +20,12 @@ $Menu-Dropdown-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
   // Elements
   //==========================================================================
 
-  @include element(Item) {
+  @include element('Item') {
     position: relative;
     transition: $global-transition;
   }
 
-  @include element(Link) {
+  @include element('Link') {
     display: block;
     padding: $Menu-Link-padding;
     white-space: nowrap;
@@ -36,12 +36,12 @@ $Menu-Dropdown-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
   }
 
   /* Cross Component Style: Dropdown__Container */
-  @include element(Children) {
+  @include element('Children') {
     box-shadow: $Menu-Dropdown-shadow;
     background: $Menu-background;
   }
 
-  @include element(Toggle) {
+  @include element('Toggle') {
     &:before {
       font-family: FontAwesome;
       content: $fa-var-bars;
@@ -57,51 +57,51 @@ $Menu-Dropdown-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
   // Modifier
   //==========================================================================
 
-  @include modifier(mobile) {
+  @include modifier('mobile') {
     @include breakpoint(max $grid-float-breakpoint) {
       background-color: $Menu-background;
       flex-direction: column;
     }
   }
 
-  @include modifier(right) {
+  @include modifier('right') {
     justify-content: flex-end;
 
-    @include element(Item) {
+    @include element('Item') {
       display: flex;
       justify-content: flex-end;
     }
   }
 
-  @include modifier(center) {
+  @include modifier('center') {
     justify-content: center;
 
-    @include element(Item) {
+    @include element('Item') {
       display: flex;
       justify-content: center;
     }
   }
 
-  @include modifier(expand) {
+  @include modifier('expand') {
 
-    @include element(Item) {
+    @include element('Item') {
       flex: 1 1 0;
     }
   }
 
-  @include modifier(vertical) {
+  @include modifier('vertical') {
     flex-direction: column;
 
-    @include element(Children) {
+    @include element('Children') {
       left: 100%;
       top: 0;
     }
   }
 
-  @include modifier(vertical-inline) {
+  @include modifier('vertical-inline') {
     flex-direction: column;
 
-    @include element(Children) {
+    @include element('Children') {
       position: relative;
       box-shadow: none;
     }

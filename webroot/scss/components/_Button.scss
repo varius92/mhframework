@@ -1,4 +1,3 @@
-
 $button-radius: 0.2em;
 $button-transition: $global-transition;
 
@@ -8,8 +7,6 @@ $button-transition: $global-transition;
 
 .Button {
   display: inline-block;
-  font-family: inherit;
-  font-size: 1rem;
   font-weight: 400;
   line-height: vr(1);
   color: $color-white;
@@ -47,6 +44,11 @@ $button-transition: $global-transition;
     @include on-event() {
       background-color: $color-primary;
     }
+  }
+
+  @include modifier('full-width') {
+    display: block;
+    width: 100%;
   }
 
   @include modifier('round') {

@@ -27,7 +27,7 @@ $Dropdown-icon: $fa-var-caret-down; // false (wenn kein Icon nötig ist)
   //==========================================================================
   // Elements
   //==========================================================================
-  @include element(Container) {
+  @include element('Container') {
     display: none;
     position: absolute;
     @include modifier(fluid){
@@ -38,7 +38,7 @@ $Dropdown-icon: $fa-var-caret-down; // false (wenn kein Icon nötig ist)
     }
   }
 
-  @include element(Toggle) {
+  @include element('Toggle') {
     @if $Dropdown-icon {
       @extend %Dropdown-Icon;
       @include when-inside('.Dropdown--open >') {
@@ -54,9 +54,9 @@ $Dropdown-icon: $fa-var-caret-down; // false (wenn kein Icon nötig ist)
   // Modifier
   //==========================================================================
 
-  @include modifier(mega) {
+  @include modifier('mega') {
     position: static;
-    @include element(Container) {
+    @include element('Container') {
       left:0;
       right: 0;
       padding: $grid-gutter $grid-gutter/2 $grid-gutter/2 $grid-gutter/2;

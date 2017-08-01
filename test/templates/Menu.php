@@ -53,9 +53,8 @@
         </div>
     </div>
 
-
     <!-- ELEMENTS -->
-    <div id="elements" class="Info-row">
+    <div id="elements" class="Info-row Info-row--empty">
         <div class="grid grid--container">
             <div class="row">
                 <div class="col">
@@ -107,11 +106,7 @@
                 </div>
             </div>
         </div>
-    </div>
-
-
-    <!-- MODIFIER -->
-    <div id="modifier" class="Info-row">
+    </div><div id="modifier" class="Info-row">
         <div class="grid grid--container">
             <div class="row">
                 <div class="col">

@@ -48,11 +48,6 @@ $MenuPrimary-Dropdown-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
 
   @include modifier('right') {
     justify-content: flex-end;
-
-    @include element('fa') {
-      display: flex;
-      justify-content: flex-end;
-    }
   }
 
   @include modifier('center') {

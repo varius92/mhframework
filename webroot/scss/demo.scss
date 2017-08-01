@@ -36,8 +36,6 @@ $color-mod: #ab345c;
     padding-bottom: 200px;
   }
 
-
-
   //==========================================================================
   // Demo Block
   //==========================================================================
@@ -45,7 +43,8 @@ $color-mod: #ab345c;
   .Demo {
     margin-top: -1px;
     .Demo__header {
-      border: .2rem solid #f9f9f9;
+    overflow: hidden;
+      border: .2rem solid $color-gray-lightest;
       position: relative;
       padding: 2rem vr(1);
       transition: .25s cubic-bezier(0.18, 0.89, 0.32, 1.28);
@@ -63,7 +62,7 @@ $color-mod: #ab345c;
       margin-left: .1em;
       margin-right: .1em;
       padding: 0 vr(1) 1rem vr(1);
-      background-color: #f9f9f9;
+      background-color: $color-gray-lightest;
       border-radius: 0 0 .5em .5em;
     }
   }
@@ -122,17 +121,17 @@ $color-mod: #ab345c;
       font-size: 1.1rem;
       margin: 0 auto;
       text-align: center;
-      top: .1rem;
+      top: .3rem;
       cursor: pointer;
-      color: #6d6d6d;
-      opacity: .3;
-      right: .4rem;
+      color: #000;
+      opacity: .1;
+      right: .6rem;
       transition: $global-transition;
       @include modifier(active) {
-        opacity: 1;
+        opacity: .5;
       }
       &:hover {
-        opacity: 1;
+        opacity: .5;
       }
     }
   }
@@ -174,7 +173,7 @@ $color-mod: #ab345c;
     }
   }
   .SelectorTable {
-    width: 800px;
+    width: 550px;
   }
   .Table--demo {
     font-size: .85rem;
@@ -183,8 +182,8 @@ $color-mod: #ab345c;
         .Table__Cell {
           &:first-of-type {
             color: $color-primary;
-            width: 200px;
-            .Button{
+            width: 220px;
+            .Button {
               font-size: .85rem !important;
               font-family: monospace, monospace;
               margin-top: 3px;
@@ -198,6 +197,9 @@ $color-mod: #ab345c;
   //==========================================================================
   //
   //==========================================================================
+  .Card{
+    //width: 300px;
+  }
   .component-demo {
     padding: vr(7) 0 vr(10) 200px;
   }
@@ -213,7 +215,7 @@ $color-mod: #ab345c;
     margin-bottom: vr(2);
   }
   .Menu--demo-component {
-    font-size: .9rem;
+    font-size: .8rem;
     position: fixed;
     right: vr(1);
     .Menu__Link {

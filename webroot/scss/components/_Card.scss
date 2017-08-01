@@ -1,0 +1,54 @@
+$Card-radius: 0.2em;
+$Card-padding: $grid-gutter/2;
+
+//==========================================================================
+// Block
+//==========================================================================
+
+.Card {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow: hidden;
+
+  border: .0556em solid $color-gray-lighter;
+  border-radius: $Card-radius;
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+  //==========================================================================
+  // Elements
+  //==========================================================================
+
+  @include element('Title') {
+    color: $color-primary;
+  }
+
+  @include element('Image') {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  @include element('Header') {
+    padding: $Card-padding $Card-padding 0;
+  }
+
+  @include element('Body') {
+    flex: 1 0 auto;
+    padding: $Card-padding;
+  }
+
+  @include element('Footer') {
+    padding: 0 $Card-padding $Card-padding;
+  }
+
+  //==========================================================================
+  // Modifier
+  //==========================================================================
+
+}
