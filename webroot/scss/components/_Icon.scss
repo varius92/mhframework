@@ -1,4 +1,3 @@
-
 $icon-map: (
       user: "\f000",
       star: "\f001",
@@ -6,7 +5,7 @@ $icon-map: (
 );
 
 @each $name, $icon in $icon-map {
-  .Icon--#{$name}:before {
+  .Icon--#{$name}:#{$icon-pseudo} {
     content: $icon;
   }
 }
@@ -16,16 +15,34 @@ $icon-map: (
 //==========================================================================
 
 .Icon {
-  font-family: $icon-font;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
 
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  &:#{$icon-pseudo} {
+    font-family: $icon-font;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-rendering: auto; // optimizelegibility throws things off #1094
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    position: relative;
+    vertical-align: middle;
+    transition: all 200ms ease-in-out;
+    top: -1px;
+  }
+
 }
 
+[class*="Icon"] {
+  &:#{$icon-pseudo} {
+    @if ($icon-pseudo: after) {
+      margin-left: .5em;
+    } @else if ($icon-pseudo: before) {
+      margin-right: .5em;
+    }
+  }
+}

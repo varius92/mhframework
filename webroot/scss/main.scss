@@ -3,50 +3,36 @@
 //==========================================================================
 // Vendors
 //==========================================================================
-
-@import
-'vendor/nomalize',
+@import 'vendor/nomalize',
 'vendor/mappy-breakpoints/mappy-breakpoints',
 'vendor/typi/scss/typi',
+'vendor/font-awesome/scss/font-awesome',
 'vendor/modularscale';
-
 //==========================================================================
 // Abstracts
 //==========================================================================
-
-@import
-'abstracts/variables',
+@import 'abstracts/variables',
 'abstracts/mixins',
 'abstracts/functions';
-@import
-'vendor/font-awesome/scss/font-awesome';
 //==========================================================================
 // Base
 //==========================================================================
-
-@import
-'base/resets',
+@import 'base/resets',
 'base/base',
 'base/fonts',
 'base/typography',
 'base/utilities';
-
 //==========================================================================
 // Layout
 //==========================================================================
-
-@import
-'layout/col',
+@import 'layout/col',
 'layout/row',
 'layout/grid',
 'layout/grid-modifier';
-
 //==========================================================================
 // Components
 //==========================================================================
-
-@import
-'components/Button',
+@import 'components/Button',
 'components/Menu',
 'components/MenuPrimary',
 'components/MenuSecondary',
@@ -54,28 +40,20 @@
 'components/Table',
 'components/Card',
 'components/Dropdown';
-
 //==========================================================================
 // Pages
 //==========================================================================
-
-
 //==========================================================================
 // Themes
 //==========================================================================
-
-@import
-'themes/themes';
-
+@import 'themes/themes';
 //==========================================================================
 // Vendors
 //==========================================================================
+@import 'vendor/font-awesome/scss/font-awesome';
 
 
 
 
 
-
-
-@import
-'demo';
+@import 'demo';

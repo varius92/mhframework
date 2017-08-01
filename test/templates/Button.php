@@ -49,18 +49,93 @@
     </div>
 
     <!-- ELEMENTS -->
-    <div id="elements" class="Info-row Info-row--empty">
+    <div id="elements" class="Info-row">
         <div class="grid grid--container">
             <div class="row">
                 <div class="col">
                     <h3>ELEMENTS</h3>
                     <!-- SelectorTable -->
-                    <p>
-                    <pre>keine vorhanden</pre>
-                    </p>
+                    <div class="SelectorTable">
+                        <table class="Table Table--border-rows Table--demo">
+                            <thead class="Table__Header">
+                            <tr class="Table__Row">
+                                <th class="Table__Cell">SELECTOR</th>
+                                <th class="Table__Cell">DESCRIPTION</th>
+                            </tr>
+                            </thead>
+                            <tbody class="Table__Body">
+
+                            <!--Row-->
+                            <tr class="Table__Row">
+                                <td class="Table__Cell">
+                                    <a href="#el-icon"
+                                       class="Button Button--link Button--example">
+                                        .Button__Icon
+                                    </a>
+                                </td>
+                                <td class="Table__Cell">
+                                    Icon container.
+                                </td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- ELEMENTS EXAMPLES -->
+    <div class="grid grid--container examples-row">
+        <h4>Examples</h4>
+        <br>
+
+        <!-- Example -->
+        <div class="row example-block" id="el-icon">
+            <div class="col">
+                <div class="example__title">
+                    # Button with Icon (Element)
+                </div>
+                <div class="Demo Demo--toggle">
+                    <div class="Demo__header">
+                        <?php
+                        demo('__Icon')
+                        ?>
+                    </div>
+                    <i class="Icon-fa Icon-fa-code Demo__toggle-btn"></i>
+                    <div class="Demo__footer">
+                        <?php
+                        code('__Icon')
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Example -->
+        <div class="row example-block" id="el-icon">
+            <div class="col">
+                <div class="example__title">
+                    # Button with Icon-Component (:before or :after)
+                </div>
+                <div class="Demo Demo--toggle">
+                    <div class="Demo__header">
+                        <?php
+                        demo('-icon-before')
+                        ?>
+                    </div>
+                    <i class="Icon-fa Icon-fa-code Demo__toggle-btn"></i>
+                    <div class="Demo__footer">
+                        <?php
+                        code('-icon-before')
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <!-- MODIFIER -->

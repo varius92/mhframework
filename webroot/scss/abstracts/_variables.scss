@@ -91,6 +91,9 @@ $grid-float-breakpoint: map_get($grid-breakpoints, 'sm');
 // Icons
 //==========================================================================
 
+//Icon als :before oder :after ausgeben
+$icon-pseudo: after !global;
+
 // Custom Icons
 $icon-font: 'icomoon';
 

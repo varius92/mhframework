@@ -1,11 +1,12 @@
-$button-radius: 0.2em;
-$button-transition: $global-transition;
+$Button-radius: 0.2em;
+$Button-transition: $global-transition;
 
 //==========================================================================
 // Block
 //==========================================================================
 
 .Button {
+  font-family: $font-base;
   display: inline-block;
   font-weight: 400;
   line-height: vr(1);
@@ -14,7 +15,7 @@ $button-transition: $global-transition;
   border: 1px solid transparent;
   text-align: center;
   background-color: $color-primary;
-  transition: $button-transition;
+  transition: $Button-transition;
   cursor: pointer;
   vertical-align: middle;
   white-space: nowrap;
@@ -31,28 +32,34 @@ $button-transition: $global-transition;
     opacity: .65;
   }
 
+
+  //==========================================================================
+  // Elements
+  //==========================================================================
+
+  @include element('Icon') {
+    position: relative;
+    vertical-align: middle;
+    transition: $Button-transition;
+    width: 1rem;
+    height: 1rem;
+    top: -1px;
+    fill: $color-white;
+    @include modifier('right'){
+      margin-left: .5em;
+    }
+    @include modifier('left'){
+      margin-right: .5em;
+    }
+  }
+
   //==========================================================================
   // Modifier
   //==========================================================================
 
-  @include modifier('ghost') {
-    background-color: transparent;
-    border-width: .1em;
-    border-style: solid;
-    border-color: $color-primary;
-    color: $color-primary;
-    @include on-event() {
-      background-color: $color-primary;
-    }
-  }
-
   @include modifier('full-width') {
     display: block;
     width: 100%;
-  }
-
-  @include modifier('round') {
-    border-radius: $button-radius;
   }
 
   @include modifier('link') {
@@ -63,6 +70,21 @@ $button-transition: $global-transition;
     @include on-event() {
       color: $color-primary-hover;
       background-color: transparent;
+    }
+  }
+
+  @include modifier('round') {
+    border-radius: $Button-radius;
+  }
+
+  @include modifier('ghost') {
+    background-color: transparent;
+    border-width: .1em;
+    border-style: solid;
+    border-color: $color-primary;
+    color: $color-primary;
+    @include on-event() {
+      background-color: $color-primary;
     }
   }
 
