@@ -6,6 +6,9 @@
             <a href="#modifier" class="Menu__Link">Modifier</a>
         </li>
         <li class="Menu__Item">
+            <a href="#fa" class="Menu__Link">FA Icons</a>
+        </li>
+        <li class="Menu__Item">
             <a href="#top" class="Menu__Link backtotop">Back to top</a>
         </li>
     </ul>
@@ -23,10 +26,10 @@
                     zwei Variationen:
 
                     <ul>
-                        <li>Custom icons <code
-                                    class="language-scss">.Icon{}</code></li>
                         <li>Font Awesome Icons
                             <code class="language-scss">.Icon{}</code></li>
+                        <li>Custom icons <code class="language-scss">
+                                .Icon .Icon--custom{}</code></li>
                     </ul>
 
                     <p>
@@ -34,11 +37,10 @@
                         der Datei
                         <code class="language-css">_variables.scss</code> kann
                         gesteuert werden, ob die Icons als <code
-                                class="language-css">:before{}</code>
+                                class="language-css">:before{}
+                            /*default*/</code>
                         oder als <code class="language-css">:after{}</code>
-                        ausgegeben werden sollen. Alles zu Font Awesome liegt
-                        unter <code
-                                class="language-css">vendor/font-awesome/</code>.
+                        ausgegeben werden sollen.
                     </p>
 
 
@@ -52,7 +54,7 @@
                         <i class="Icon Icon--code Demo__toggle-btn"></i>
                         <div class="Demo__footer">
                             <?php
-                            code()
+                            html()
                             ?>
                         </div>
                     </div>
@@ -88,8 +90,9 @@
                                     </a>
                                 </td>
                                 <td class="Table__Cell">
-                                    Change font for custom icons. <br>
-                                    (<code class="language-scss">$font-icon-custom: 'icomoon';</code>)
+                                    Ändert die Font für Custom Icons. <br>
+                                    (<code class="language-scss">$font-icon-custom:
+                                        'icomoon';</code>)
                                 </td>
                             </tr>
 
@@ -102,7 +105,7 @@
                                     </a>
                                 </td>
                                 <td class="Table__Cell">
-                                    Add a spin animation.
+                                    Fügt eine Spin Animation hinzu.
                                 </td>
                             </tr>
 
@@ -115,7 +118,7 @@
                                     </a>
                                 </td>
                                 <td class="Table__Cell">
-                                   Add a pulse animation.
+                                    Fügt eine Pulse Animation hinzu.
                                 </td>
                             </tr>
 
@@ -128,7 +131,7 @@
                                     </a>
                                 </td>
                                 <td class="Table__Cell">
-                                    Rotate icon by 90 degrees.
+                                    Dreht das Icon um 90 Grad.
                                 </td>
                             </tr>
 
@@ -141,7 +144,7 @@
                                     </a>
                                 </td>
                                 <td class="Table__Cell">
-                                    Rotate icon by 180 degrees.
+                                    Dreht das Icon um 180 Grad.
                                 </td>
                             </tr>
 
@@ -154,7 +157,7 @@
                                     </a>
                                 </td>
                                 <td class="Table__Cell">
-                                    Rotate icon by 270 degrees.
+                                    Dreht das Icon um 270 Grad.
                                 </td>
                             </tr>
 
@@ -167,7 +170,7 @@
                                     </a>
                                 </td>
                                 <td class="Table__Cell">
-                                    Flip icon horizontally.
+                                    Spiegelt das Icon horizontal.
                                 </td>
                             </tr>
 
@@ -180,7 +183,7 @@
                                     </a>
                                 </td>
                                 <td class="Table__Cell">
-                                    Flip icon vertically.
+                                    Spiegelt das Icon vertikal.
                                 </td>
                             </tr>
 
@@ -190,7 +193,8 @@
                                     .Icon--pull-left
                                 </td>
                                 <td class="Table__Cell">
-                                    Left floated icon with margin-right gap.
+                                    Verschiebung nach links mit einem
+                                    margin-right Abstand.
                                 </td>
                             </tr>
 
@@ -200,7 +204,8 @@
                                     .Icon--pull-right
                                 </td>
                                 <td class="Table__Cell">
-                                    Right floated icon with margin-left gap.
+                                    Verschiebung nach rechts mit einem
+                                    margin-left Abstand.
                                 </td>
                             </tr>
 
@@ -232,7 +237,7 @@
                     <i class="Icon Icon--code Demo__toggle-btn"></i>
                     <div class="Demo__footer">
                         <?php
-                        code('-custom')
+                        html('-custom')
                         ?>
                     </div>
                 </div>
@@ -254,7 +259,7 @@
                     <i class="Icon Icon--code Demo__toggle-btn"></i>
                     <div class="Demo__footer">
                         <?php
-                        code('-animated')
+                        html('-animated')
                         ?>
                     </div>
                 </div>
@@ -276,13 +281,19 @@
                     <i class="Icon Icon--code Demo__toggle-btn"></i>
                     <div class="Demo__footer">
                         <?php
-                        code('-rotate')
+                        html('-rotate')
                         ?>
                     </div>
                 </div>
             </div>
         </div>
+        <br>
+        <br>
+        <br>
+        <h2 id="fa">Font Awesome Icons</h2>
 
 
+        <iframe class="fa-iframe" src="http://fontawesome.io/icons/#search"
+                frameborder="0"></iframe>
     </div>
-</div>
+

@@ -41,7 +41,7 @@
                         <i class="Icon Icon--code Demo__toggle-btn"></i>
                         <div class="Demo__footer">
                             <?php
-                            code()
+                            html()
                             ?>
                         </div>
                     </div>
@@ -109,7 +109,7 @@
                     <i class="Icon Icon--code Demo__toggle-btn"></i>
                     <div class="Demo__footer">
                         <?php
-                        code('element')
+                        html('element')
                         ?>
                     </div>
                 </div>
@@ -176,7 +176,7 @@
                     <i class="Icon Icon--code Demo__toggle-btn"></i>
                     <div class="Demo__footer">
                         <?php
-                        code('modifer')
+                        html('modifer')
                         ?>
                     </div>
                 </div>

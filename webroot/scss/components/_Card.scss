@@ -41,10 +41,16 @@ $Card-padding: $grid-gutter/2;
   @include element('Body') {
     flex: 1 0 auto;
     padding: $Card-padding;
+    > :last-child {
+      margin-bottom: 0;
+    }
   }
 
   @include element('Footer') {
     padding: 0 $Card-padding $Card-padding;
+    > :last-child {
+      margin-bottom: 0;
+    }
   }
 
   //==========================================================================

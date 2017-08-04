@@ -44,7 +44,7 @@
                         <i class="Icon Icon--code Demo__toggle-btn"></i>
                         <div class="Demo__footer">
                             <?php
-                            code()
+                            html()
                             ?>
                         </div>
                     </div>
@@ -215,7 +215,7 @@
                     <i class="Icon Icon--code Demo__toggle-btn"></i>
                     <div class="Demo__footer">
                         <?php
-                        code('--mobile')
+                        html('--mobile')
                         ?>
                     </div>
                 </div>
@@ -237,7 +237,7 @@
                     <i class="Icon Icon--code Demo__toggle-btn"></i>
                     <div class="Demo__footer">
                         <?php
-                        code('--right')
+                        html('--right')
                         ?>
                     </div>
                 </div>
@@ -259,7 +259,7 @@
                     <i class="Icon Icon--code Demo__toggle-btn"></i>
                     <div class="Demo__footer">
                         <?php
-                        code('--center')
+                        html('--center')
                         ?>
                     </div>
                 </div>
@@ -281,7 +281,7 @@
                     <i class="Icon Icon--code Demo__toggle-btn"></i>
                     <div class="Demo__footer">
                         <?php
-                        code('--expand')
+                        html('--expand')
                         ?>
                     </div>
                 </div>
@@ -303,7 +303,7 @@
                     <i class="Icon Icon--code Demo__toggle-btn"></i>
                     <div class="Demo__footer">
                         <?php
-                        code('--vertical')
+                        html('--vertical')
                         ?>
                     </div>
                 </div>
@@ -435,7 +435,7 @@
                     <i class="Icon Icon--code Demo__toggle-btn"></i>
                     <div class="Demo__footer">
                         <?php
-                        code('--dp-hh')
+                        html('--dp-hh')
                         ?>
                     </div>
                 </div>
@@ -457,7 +457,7 @@
                     <i class="Icon Icon--code Demo__toggle-btn"></i>
                     <div class="Demo__footer">
                         <?php
-                        code('--dp-hv')
+                        html('--dp-hv')
                         ?>
                     </div>
                 </div>
@@ -480,7 +480,7 @@
                     <i class="Icon Icon--code Demo__toggle-btn"></i>
                     <div class="Demo__footer">
                         <?php
-                        code('--dp-vv')
+                        html('--dp-vv')
                         ?>
                     </div>
                 </div>
@@ -502,7 +502,7 @@
                     <i class="Icon Icon--code Demo__toggle-btn"></i>
                     <div class="Demo__footer">
                         <?php
-                        code('--dp-vh')
+                        html('--dp-vh')
                         ?>
                     </div>
                 </div>
@@ -524,7 +524,7 @@
                     <i class="Icon Icon--code Demo__toggle-btn"></i>
                     <div class="Demo__footer">
                         <?php
-                        code('--dp-vInline')
+                        html('--dp-vInline')
                         ?>
                     </div>
                 </div>
@@ -546,7 +546,7 @@
                     <i class="Icon Icon--code Demo__toggle-btn"></i>
                     <div class="Demo__footer">
                         <?php
-                        code('--dp-mega')
+                        html('--dp-mega')
                         ?>
                     </div>
                 </div>

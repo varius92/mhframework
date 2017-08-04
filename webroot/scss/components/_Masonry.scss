@@ -1,0 +1,37 @@
+$Masonry-columns-gap: $grid-gutter/2;
+
+$Masonry-columns: (
+      xs: 1,
+      sm: 2,
+      md: 3,
+      lg: 4,
+);
+
+//==========================================================================
+// Block
+//==========================================================================
+.Masonry {
+
+  // Columns according to breakpoints
+  @each $breakpont, $columns in $Masonry-columns {
+    @include breakpoint(#{$breakpont}) {
+      column-count: $columns;
+    }
+  }
+
+  /* Cross Component Style*/
+  .Card {
+    margin-bottom: $Masonry-columns-gap;
+    transition: all 200ms ease-in-out;
+  }
+
+  @include breakpoint(xs) {
+    column-gap: $Masonry-columns-gap;
+
+    /* Cross Component Style*/
+    .Card {
+      display: inline-block;
+      width: 100%; // Don't let their width change
+    }
+  }
+}

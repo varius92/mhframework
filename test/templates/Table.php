@@ -41,7 +41,7 @@
                         <i class="Icon Icon--code Demo__toggle-btn"></i>
                         <div class="Demo__footer">
                             <?php
-                            code()
+                            html()
                             ?>
                         </div>
                     </div>
@@ -162,7 +162,7 @@
                     <i class="Icon Icon--code Demo__toggle-btn"></i>
                     <div class="Demo__footer">
                         <?php
-                        code('__Responsive')
+                        html('__Responsive')
                         ?>
                     </div>
                 </div>
@@ -257,7 +257,7 @@
                     <i class="Icon Icon--code Demo__toggle-btn"></i>
                     <div class="Demo__footer">
                         <?php
-                        code('--striped')
+                        html('--striped')
                         ?>
                     </div>
                 </div>
@@ -279,7 +279,7 @@
                     <i class="Icon Icon--code Demo__toggle-btn"></i>
                     <div class="Demo__footer">
                         <?php
-                        code('--border-rows')
+                        html('--border-rows')
                         ?>
                     </div>
                 </div>
@@ -301,7 +301,7 @@
                     <i class="Icon Icon--code Demo__toggle-btn"></i>
                     <div class="Demo__footer">
                         <?php
-                        code('--border-cells')
+                        html('--border-cells')
                         ?>
                     </div>
                 </div>

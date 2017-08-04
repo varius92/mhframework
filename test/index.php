@@ -28,9 +28,14 @@ function demo($class = '', $zusatz = '')
 {
     include_once 'components/'.$_GET['s'].$zusatz.'/'.$_GET['s'].$class.'.html';
 }
-function code($class = '', $zusatz = '')
+function html($class = '', $zusatz = '')
 {
     echo '<pre data-src="components/'.$_GET['s'].$zusatz.'/'.$_GET['s'].$class.'.html">
+                       </pre>';
+}
+function scss($class = '', $zusatz = '')
+{
+    echo '<pre data-src="components/'.$_GET['s'].$zusatz.'/'.$_GET['s'].$class.'.scss">
                        </pre>';
 }
 

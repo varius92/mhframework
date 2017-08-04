@@ -2,6 +2,9 @@
 %icon {
   display: inline-block;
   &:#{$icon-pseudo} {
+    display: inline-block;
+    transition: all 200ms ease-in-out;
+
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -10,8 +13,6 @@
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
-    transition: all 200ms ease-in-out;
   }
 }
 
