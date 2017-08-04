@@ -7,6 +7,17 @@ a {
   }
 }
 
+code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 0.8em;
+  padding: 0.2em;
+  border-radius: $global-radius;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+//==========================================================================
+// Form
+//==========================================================================
 /* remove yellow from chrome auto-fill background */
 input:-webkit-autofill,
 textarea:-webkit-autofill,
@@ -15,11 +26,9 @@ select:-webkit-autofill {
   -webkit-text-fill-color: $color-gray-dark;
   -webkit-box-shadow: 0 0 0 1000px white inset !important;
 }
-
-code {
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  font-size: 0.8em;
-  padding: 0.2em;
-  border-radius: $global-radius;
-  background-color: rgba(0, 0, 0, 0.1);
+fieldset {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
 }

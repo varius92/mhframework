@@ -1,0 +1,63 @@
+//==========================================================================
+// Block
+//==========================================================================
+
+.Form {
+
+  //==========================================================================
+  // Elements
+  //==========================================================================
+  @include element('Group') {
+    margin-bottom: $grid-gutter;
+  }
+
+  @include element('Control') {
+    display: block;
+    width: 100%;
+    padding: .5em .75em;
+    border: 1px solid $color-gray-lighter;
+    border-radius: $global-radius;
+    background-color: $color-white;
+    &::placeholder {
+      opacity: .5;
+    }
+    &:focus{
+      border-color: $color-primary;
+      outline: 0;
+    }
+  }
+  @include element('Label') {
+    display: inline-block;
+    margin-bottom: .5rem;
+    @include modifier('col'){
+      padding-top: calc(.5rem - 1px * 2);
+      padding-bottom: calc(.5rem - 1px * 2);
+      margin-bottom: 0;
+    }
+  }
+
+  @include element('Check') {
+    position: relative;
+    display: block;
+  }
+  @include element('CheckLabel') {
+
+  }
+  @include element('CheckInput') {
+
+  }
+  @include element('Group') {
+
+  }
+  //==========================================================================
+  // Modifier
+  //==========================================================================
+
+  @include modifier('disabled'){
+    * {
+      opacity: .75;
+      cursor: not-allowed;
+    }
+  }
+
+}

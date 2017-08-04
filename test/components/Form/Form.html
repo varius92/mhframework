@@ -1,0 +1,85 @@
+<form class="Form">
+    <div class="Form__Group">
+        <label class="Form__Label" for="exampleInputEmail1">Email address</label>
+        <input type="email" class="Form__Control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+
+
+    <div class="Form__Group">
+        <label class="Form__Label" for="exampleInputPassword1">Password</label>
+        <input type="password" class="Form__Control" id="exampleInputPassword1" placeholder="Password">
+    </div>
+
+
+    <div class="Form__Group">
+        <label class="Form__Label" for="exampleSelect1">Example select</label>
+        <select class="Form__Control" id="exampleSelect1">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+    </div>
+
+
+    <div class="Form__Group">
+        <label class="Form__Label" for="exampleSelect2">Example multiple select</label>
+        <select multiple="" class="Form__Control" id="exampleSelect2">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+    </div>
+
+
+    <div class="Form__Group">
+        <label class="Form__Label" for="exampleTextarea">Example textarea</label>
+        <textarea class="Form__Control" id="exampleTextarea" rows="3"></textarea>
+    </div>
+
+
+    <div class="Form__Group">
+        <label class="Form__Label" for="exampleInputFile">File input</label>
+        <input type="file" class="Form__Control" id="exampleInputFile" aria-describedby="fileHelp">
+        <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+    </div>
+
+
+    <fieldset class="Form__Group">
+        <legend>Radio buttons</legend>
+        <div class="Form__Check">
+            <label class="Form__Label" class="Form__CheckLabel">
+                <input type="radio" class="Form__CheckInput" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+                Option one is this and that—be sure to include why it's great
+            </label>
+        </div>
+        <div class="Form__Check">
+            <label class="Form__Label" class="Form__CheckLabel">
+                <input type="radio" class="Form__CheckInput" name="optionsRadios" id="optionsRadios2" value="option2">
+                Option two can be something else and selecting it will deselect option one
+            </label>
+        </div>
+        <div class="Form__Check Form--disabled">
+            <label class="Form__Label" class="Form__CheckLabel">
+                <input type="radio" class="Form__CheckInput" name="optionsRadios" id="optionsRadios3" value="option3" disabled="">
+                Option three is disabled
+            </label>
+        </div>
+    </fieldset>
+
+
+    <div class="Form__Check">
+        <label class="Form__Label" class="Form__CheckLabel">
+            <input type="checkbox" class="Form__CheckInput">
+            Check me out
+        </label>
+    </div>
+
+
+    <button type="submit" class="Button">Submit</button>
+
+</form>
