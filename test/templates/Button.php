@@ -36,7 +36,7 @@
                             demo()
                             ?>
                         </div>
-                        <i class="Icon-fa Icon-fa-code Demo__toggle-btn"></i>
+                        <i class="Icon Icon--code Demo__toggle-btn"></i>
                         <div class="Demo__footer">
                             <?php
                             code()
@@ -103,7 +103,7 @@
                         demo('__Icon')
                         ?>
                     </div>
-                    <i class="Icon-fa Icon-fa-code Demo__toggle-btn"></i>
+                    <i class="Icon Icon--code Demo__toggle-btn"></i>
                     <div class="Demo__footer">
                         <?php
                         code('__Icon')
@@ -126,7 +126,7 @@
                         demo('-icon-before')
                         ?>
                     </div>
-                    <i class="Icon-fa Icon-fa-code Demo__toggle-btn"></i>
+                    <i class="Icon Icon--code Demo__toggle-btn"></i>
                     <div class="Demo__footer">
                         <?php
                         code('-icon-before')
@@ -234,7 +234,7 @@
                         demo('--full-width')
                         ?>
                     </div>
-                    <i class="Icon-fa Icon-fa-code Demo__toggle-btn"></i>
+                    <i class="Icon Icon--code Demo__toggle-btn"></i>
                     <div class="Demo__footer">
                         <?php
                         code('--full-width')
@@ -256,7 +256,7 @@
                         demo('--round')
                         ?>
                     </div>
-                    <i class="Icon-fa Icon-fa-code Demo__toggle-btn"></i>
+                    <i class="Icon Icon--code Demo__toggle-btn"></i>
                     <div class="Demo__footer">
                         <?php
                         code('--round')
@@ -278,7 +278,7 @@
                         demo('--ghost')
                         ?>
                     </div>
-                    <i class="Icon-fa Icon-fa-code Demo__toggle-btn"></i>
+                    <i class="Icon Icon--code Demo__toggle-btn"></i>
                     <div class="Demo__footer">
                         <?php
                         code('--ghost')
@@ -300,7 +300,7 @@
                         demo('--link')
                         ?>
                     </div>
-                    <i class="Icon-fa Icon-fa-code Demo__toggle-btn"></i>
+                    <i class="Icon Icon--code Demo__toggle-btn"></i>
                     <div class="Demo__footer">
                         <?php
                         code('--link')

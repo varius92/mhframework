@@ -33,10 +33,18 @@ $font-primary: 'Roboto', sans-serif;
 $text-color: $color-gray-dark;
 $text-weight: 300;
 
+// Custom Icons
+$font-icon-custom: 'icomoon';
+// Font Awesome Icons
+$font-icon-fa: 'FontAwesome';
+
+//==========================================================================
+// Icons
+//==========================================================================
+$icon-pseudo: before;
+
 //==========================================================================
 // Typi
-// ----
-// Help: vendor/typi/scss/_typi.scss
 //==========================================================================
 
 $typi: (
@@ -86,23 +94,6 @@ $grid-columns: 12;
 $grid-gutter: vr(1);
 $grid-container-width: 50em;
 $grid-float-breakpoint: map_get($grid-breakpoints, 'sm');
-
-//==========================================================================
-// Icons
-//==========================================================================
-
-//Icon als :before oder :after ausgeben
-$icon-pseudo: after !global;
-
-// Custom Icons
-$icon-font: 'icomoon';
-
-// Font-Awesome
-$fa-css-prefix: Icon-fa;
-$fa-font-size-base: 1rem;
-$fa-line-height-base: vr(1);
-//$fa-font-path: "../scss/vendor/font-awesome/fonts";
-$fa-font-path: "//netdna.bootstrapcdn.com/font-awesome/4.7.0/fonts"; // for referencing Bootstrap CDN font files directly
 
 //==========================================================================
 // Global

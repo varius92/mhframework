@@ -43,7 +43,6 @@ $color-mod: #ab345c;
   .Demo {
     margin-top: -1px;
     .Demo__header {
-    overflow: hidden;
       border: .2rem solid $color-gray-lightest;
       position: relative;
       padding: 2rem vr(1);
@@ -118,7 +117,7 @@ $color-mod: #ab345c;
     }
     .Demo__toggle-btn {
       position: absolute;
-      font-size: 1.1rem;
+      font-size: 1.1rem !important;
       margin: 0 auto;
       text-align: center;
       top: .3rem;
@@ -195,10 +194,20 @@ $color-mod: #ab345c;
   }
 
   //==========================================================================
+  // Icon
+  //==========================================================================
+  .icon-demo {
+    .Icon, .IconFA {
+      font-size: 3em;
+      margin-right: .4em;
+    }
+  }
+
+  //==========================================================================
   //
   //==========================================================================
-  .Card{
-    //width: 300px;
+  .Card {
+    width: 300px;
   }
   .component-demo {
     padding: vr(7) 0 vr(10) 200px;

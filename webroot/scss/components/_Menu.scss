@@ -41,18 +41,6 @@ $Menu-Dropdown-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
     background: $Menu-background;
   }
 
-  @include element('Toggle') {
-    &:before {
-      font-family: FontAwesome;
-      content: $fa-var-bars;
-      display: inline-block;
-    }
-
-    @include breakpoint($grid-float-breakpoint) {
-      display: none;
-    }
-  }
-
   //==========================================================================
   // Modifier
   //==========================================================================

@@ -1,12 +1,29 @@
-$icon-map: (
-      user: "\f000",
-      star: "\f001",
-      search: "\f002",
-);
+// Placeholder: Icon & IconFA properties
+%icon {
+  display: inline-block;
+  &:#{$icon-pseudo} {
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 
-@each $name, $icon in $icon-map {
-  .Icon--#{$name}:#{$icon-pseudo} {
-    content: $icon;
+    transition: all 200ms ease-in-out;
+  }
+}
+
+// Spin Animation
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
   }
 }
 
@@ -17,32 +34,84 @@ $icon-map: (
 .Icon {
 
   &:#{$icon-pseudo} {
-    font-family: $icon-font;
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    text-rendering: auto; // optimizelegibility throws things off #1094
-
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
-    position: relative;
-    vertical-align: middle;
-    transition: all 200ms ease-in-out;
-    top: -1px;
+    font-family: $font-icon-fa;
   }
 
-}
+  @extend %icon;
 
-[class*="Icon"] {
-  &:#{$icon-pseudo} {
-    @if ($icon-pseudo: after) {
+  //==========================================================================
+  // Modifier
+  //==========================================================================
+  @include modifier('custom') {
+    &:#{$icon-pseudo} {
+      font-family: $font-icon-custom;
+    }
+  }
+
+  @include modifier('pull-right') {
+    &:#{$icon-pseudo} {
+      float: right;
       margin-left: .5em;
-    } @else if ($icon-pseudo: before) {
+    }
+  }
+
+  @include modifier('pull-left') {
+    &:#{$icon-pseudo} {
+      float: left;
       margin-right: .5em;
     }
   }
+
+  // Spinning Icons
+  @include modifier('spin') {
+    -webkit-animation: fa-spin 2s infinite linear;
+    animation: fa-spin 2s infinite linear;
+  }
+
+  @include modifier('pulse') {
+    -webkit-animation: fa-spin 1s infinite steps(8);
+    animation: fa-spin 1s infinite steps(8);
+  }
+
+  // Rotated & Flipped Icons
+  @include modifier('rotate-90') {
+    &:#{$icon-pseudo} {
+      transform: rotate(90deg);
+    }
+  }
+
+  @include modifier('rotate-180') {
+    &:#{$icon-pseudo} {
+      transform: rotate(180deg);
+    }
+  }
+
+  @include modifier('rotate-270') {
+    &:#{$icon-pseudo} {
+      transform: rotate(270deg);
+    }
+  }
+
+  @include modifier('flip-horizontal') {
+    &:#{$icon-pseudo} {
+      transform: scale(-1, 1);
+    }
+  }
+
+  @include modifier('flip-vertical') {
+    &:#{$icon-pseudo} {
+      transform: scale(1, -1);
+    }
+  }
+
+  // Icons
+  @each $name, $icon in $icon-map {
+    @include modifier(#{$name}) {
+      &:#{$icon-pseudo} {
+        content: $icon;
+      }
+    }
+  }
+
 }
+

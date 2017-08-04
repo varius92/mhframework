@@ -38,7 +38,7 @@
                             demo()
                             ?>
                         </div>
-                        <i class="Icon-fa Icon-fa-code Demo__toggle-btn"></i>
+                        <i class="Icon Icon--code Demo__toggle-btn"></i>
                         <div class="Demo__footer">
                             <?php
                             code()
@@ -106,7 +106,7 @@
                         demo('element')
                         ?>
                     </div>
-                    <i class="Icon-fa Icon-fa-code Demo__toggle-btn"></i>
+                    <i class="Icon Icon--code Demo__toggle-btn"></i>
                     <div class="Demo__footer">
                         <?php
                         code('element')
@@ -173,7 +173,7 @@
                         demo('modifier')
                         ?>
                     </div>
-                    <i class="Icon-fa Icon-fa-code Demo__toggle-btn"></i>
+                    <i class="Icon Icon--code Demo__toggle-btn"></i>
                     <div class="Demo__footer">
                         <?php
                         code('modifer')

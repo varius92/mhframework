@@ -1,23 +1,4 @@
-
-$Dropdown-icon: $fa-var-caret-down; // false (wenn kein Icon nötig ist)
-
-//==========================================================================
-// Placeholder
-//==========================================================================
-
-%Dropdown-Icon {
-  &:after {
-    display: inline-block;
-    font-family: FontAwesome;
-    font-size: .8rem;
-    content: $Dropdown-icon;
-    color: $color-black;
-    pointer-events: none;
-    margin-left: 0.4em;
-    transition: $global-transition;
-    opacity: .3;
-  }
-}
+$Dropdown-icon: true; // false (wenn kein Icon nötig ist)
 
 //==========================================================================
 // Block
@@ -30,8 +11,8 @@ $Dropdown-icon: $fa-var-caret-down; // false (wenn kein Icon nötig ist)
   @include element('Container') {
     display: none;
     position: absolute;
-    @include modifier(fluid){
-      @include breakpoint($grid-float-breakpoint){
+    @include modifier(fluid) {
+      @include breakpoint($grid-float-breakpoint) {
         display: block !important;
         position: relative;
       }
@@ -40,7 +21,14 @@ $Dropdown-icon: $fa-var-caret-down; // false (wenn kein Icon nötig ist)
 
   @include element('Toggle') {
     @if $Dropdown-icon {
-      @extend %Dropdown-Icon;
+      @include icon('caret-down', after);
+      &:after {
+        font-size: .8rem;
+        color: $color-black;
+        pointer-events: none;
+        margin-left: 0.4em;
+        opacity: .3;
+      }
       @include when-inside('.Dropdown--open >') {
         &:after {
           opacity: 1;
@@ -57,7 +45,7 @@ $Dropdown-icon: $fa-var-caret-down; // false (wenn kein Icon nötig ist)
   @include modifier('mega') {
     position: static;
     @include element('Container') {
-      left:0;
+      left: 0;
       right: 0;
       padding: $grid-gutter $grid-gutter/2 $grid-gutter/2 $grid-gutter/2;
     }

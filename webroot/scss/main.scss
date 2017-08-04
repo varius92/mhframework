@@ -6,12 +6,12 @@
 @import 'vendor/nomalize',
 'vendor/mappy-breakpoints/mappy-breakpoints',
 'vendor/typi/scss/typi',
-'vendor/font-awesome/scss/font-awesome',
 'vendor/modularscale';
 //==========================================================================
 // Abstracts
 //==========================================================================
 @import 'abstracts/variables',
+'abstracts/icons',
 'abstracts/mixins',
 'abstracts/functions';
 //==========================================================================
@@ -47,13 +47,4 @@
 // Themes
 //==========================================================================
 @import 'themes/themes';
-//==========================================================================
-// Vendors
-//==========================================================================
-@import 'vendor/font-awesome/scss/font-awesome';
-
-
-
-
-
 @import 'demo';

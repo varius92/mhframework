@@ -38,7 +38,7 @@
                             demo()
                             ?>
                         </div>
-                        <i class="Icon-fa Icon-fa-code Demo__toggle-btn"></i>
+                        <i class="Icon Icon--code Demo__toggle-btn"></i>
                         <div class="Demo__footer">
                             <?php
                             code()
@@ -160,7 +160,7 @@
                         demo('-complete')
                         ?>
                     </div>
-                    <i class="Icon-fa Icon-fa-code Demo__toggle-btn"></i>
+                    <i class="Icon Icon--code Demo__toggle-btn"></i>
                     <div class="Demo__footer">
                         <?php
                         code('-complete')

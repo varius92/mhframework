@@ -41,7 +41,7 @@
                             demo()
                             ?>
                         </div>
-                        <i class="Icon-fa Icon-fa-code Demo__toggle-btn"></i>
+                        <i class="Icon Icon--code Demo__toggle-btn"></i>
                         <div class="Demo__footer">
                             <?php
                             code()
@@ -212,7 +212,7 @@
                         demo('--mobile')
                         ?>
                     </div>
-                    <i class="Icon-fa Icon-fa-code Demo__toggle-btn"></i>
+                    <i class="Icon Icon--code Demo__toggle-btn"></i>
                     <div class="Demo__footer">
                         <?php
                         code('--mobile')
@@ -234,7 +234,7 @@
                         demo('--right')
                         ?>
                     </div>
-                    <i class="Icon-fa Icon-fa-code Demo__toggle-btn"></i>
+                    <i class="Icon Icon--code Demo__toggle-btn"></i>
                     <div class="Demo__footer">
                         <?php
                         code('--right')
@@ -256,7 +256,7 @@
                         demo('--center')
                         ?>
                     </div>
-                    <i class="Icon-fa Icon-fa-code Demo__toggle-btn"></i>
+                    <i class="Icon Icon--code Demo__toggle-btn"></i>
                     <div class="Demo__footer">
                         <?php
                         code('--center')
@@ -278,7 +278,7 @@
                         demo('--expand')
                         ?>
                     </div>
-                    <i class="Icon-fa Icon-fa-code Demo__toggle-btn"></i>
+                    <i class="Icon Icon--code Demo__toggle-btn"></i>
                     <div class="Demo__footer">
                         <?php
                         code('--expand')
@@ -300,7 +300,7 @@
                         demo('--vertical')
                         ?>
                     </div>
-                    <i class="Icon-fa Icon-fa-code Demo__toggle-btn"></i>
+                    <i class="Icon Icon--code Demo__toggle-btn"></i>
                     <div class="Demo__footer">
                         <?php
                         code('--vertical')
@@ -432,7 +432,7 @@
                         demo('--dp-hh')
                         ?>
                     </div>
-                    <i class="Icon-fa Icon-fa-code Demo__toggle-btn"></i>
+                    <i class="Icon Icon--code Demo__toggle-btn"></i>
                     <div class="Demo__footer">
                         <?php
                         code('--dp-hh')
@@ -454,7 +454,7 @@
                         demo('--dp-hv')
                         ?>
                     </div>
-                    <i class="Icon-fa Icon-fa-code Demo__toggle-btn"></i>
+                    <i class="Icon Icon--code Demo__toggle-btn"></i>
                     <div class="Demo__footer">
                         <?php
                         code('--dp-hv')
@@ -477,7 +477,7 @@
                         demo('--dp-vv')
                         ?>
                     </div>
-                    <i class="Icon-fa Icon-fa-code Demo__toggle-btn"></i>
+                    <i class="Icon Icon--code Demo__toggle-btn"></i>
                     <div class="Demo__footer">
                         <?php
                         code('--dp-vv')
@@ -499,7 +499,7 @@
                         demo('--dp-vh')
                         ?>
                     </div>
-                    <i class="Icon-fa Icon-fa-code Demo__toggle-btn"></i>
+                    <i class="Icon Icon--code Demo__toggle-btn"></i>
                     <div class="Demo__footer">
                         <?php
                         code('--dp-vh')
@@ -521,7 +521,7 @@
                         demo('--dp-vInline')
                         ?>
                     </div>
-                    <i class="Icon-fa Icon-fa-code Demo__toggle-btn"></i>
+                    <i class="Icon Icon--code Demo__toggle-btn"></i>
                     <div class="Demo__footer">
                         <?php
                         code('--dp-vInline')
@@ -543,7 +543,7 @@
                         demo('--dp-mega')
                         ?>
                     </div>
-                    <i class="Icon-fa Icon-fa-code Demo__toggle-btn"></i>
+                    <i class="Icon Icon--code Demo__toggle-btn"></i>
                     <div class="Demo__footer">
                         <?php
                         code('--dp-mega')

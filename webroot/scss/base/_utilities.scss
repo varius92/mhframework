@@ -43,12 +43,23 @@
   }
 }
 
-@mixin make-hidden-visible-utilities($breakpoint) {
+[class*='u-visible-'] {
+  display: none !important;
+}
+
+[class*='u-hidden-'] {
+  display: block !important;
+}
+
+@mixin make-hidden-utilities($breakpoint) {
   .u-hidden-#{$breakpoint} {
-    display: none;
+    display: none !important;
   }
+}
+
+@mixin make-visible-utilities($breakpoint) {
   .u-visible-#{$breakpoint} {
-    display: block;
+    display: block !important;
   }
 }
 
@@ -137,7 +148,8 @@ $color-map: (
 //==========================================================================
 
 @mixin make-responsive-utilities($breakpoint) {
-  @include make-hidden-visible-utilities($breakpoint);
+  @include make-hidden-utilities($breakpoint);
+  @include make-visible-utilities($breakpoint);
   @include make-sticky-utilities($breakpoint);
 }
 
