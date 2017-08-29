@@ -172,19 +172,6 @@
                             <!--Row-->
                             <tr class="Table__Row">
                                 <td class="Table__Cell">
-                                    <a href="#mod-round"
-                                       class="Button Button--link Button--example">
-                                        .Button--round
-                                    </a>
-                                </td>
-                                <td class="Table__Cell">
-                                    Adds a rounded border.
-                                </td>
-                            </tr>
-
-                            <!--Row-->
-                            <tr class="Table__Row">
-                                <td class="Table__Cell">
                                     <a href="#mod-ghost"
                                        class="Button Button--link Button--example">
                                         .Button--ghost
@@ -238,28 +225,6 @@
                     <div class="Demo__footer">
                         <?php
                         html('--full-width')
-                        ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Example -->
-        <div class="row example-block" id="mod-round">
-            <div class="col">
-                <div class="example__title">
-                    # Button--round
-                </div>
-                <div class="Demo Demo--toggle">
-                    <div class="Demo__header">
-                        <?php
-                        demo('--round')
-                        ?>
-                    </div>
-                    <i class="Icon Icon--code Demo__toggle-btn"></i>
-                    <div class="Demo__footer">
-                        <?php
-                        html('--round')
                         ?>
                     </div>
                 </div>

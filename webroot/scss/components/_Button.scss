@@ -9,9 +9,10 @@ $Button-transition: $global-transition;
   font-family: $font-base;
   display: inline-block;
   font-weight: 400;
-  line-height: vr(1);
   color: $color-white;
-  padding: .5em 1em;
+  border-radius: $Button-radius;
+  line-height: inherit;
+  padding: vr(1)/4 vr(1)/2;
   border: 1px solid transparent;
   text-align: center;
   background-color: $color-primary;
@@ -32,7 +33,6 @@ $Button-transition: $global-transition;
     opacity: .65;
   }
 
-
   //==========================================================================
   // Elements
   //==========================================================================
@@ -45,10 +45,10 @@ $Button-transition: $global-transition;
     height: 1rem;
     top: -1px;
     fill: $color-white;
-    @include modifier('right'){
+    @include modifier('right') {
       margin-left: .5em;
     }
-    @include modifier('left'){
+    @include modifier('left') {
       margin-right: .5em;
     }
   }
@@ -71,10 +71,6 @@ $Button-transition: $global-transition;
       color: $color-primary-hover;
       background-color: transparent;
     }
-  }
-
-  @include modifier('round') {
-    border-radius: $Button-radius;
   }
 
   @include modifier('ghost') {

@@ -1,3 +1,24 @@
+//$Form-input-height: 2.22rem;
+$Form-input-color: $text-color;
+$Form-input-radius: $global-radius;
+$Form-input-border: 1px solid $color-gray-lighter;
+$Form-input-padding: vr(1)/4 vr(1)/2;
+// CUSTOM FORM
+$Form-custom-width: 1rem;
+$Form-custom-height: 1rem;
+$Form-custom-bg-color: $color-white;
+$Form-custom-active-color: $color-primary;
+$Form-custom-disabled-color: $color-gray-light;
+$Form-custom-border: .1em solid $color-gray;
+$Form-custom-transition: all 200ms ease;
+$Form-custom-icon-size: 90%;
+// Checkbox
+$Form-customCheckbox-checked-icon: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='#{$color-white}' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
+$Form-customCheckbox-radius: $global-radius;
+// Radio
+$Form-customRadio-checked-icon: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='#{$color-white}'/%3E%3C/svg%3E");
+$Form-customRadio-radius: 50%;
+
 //==========================================================================
 // Block
 //==========================================================================
@@ -7,57 +28,256 @@
   //==========================================================================
   // Elements
   //==========================================================================
+
+  // Designed to help with the organization and spacing of vertical forms. For
+  // horizontal forms, use the predefined grid classes.
   @include element('Group') {
-    margin-bottom: $grid-gutter;
+    margin-bottom: vr(1)/2;
   }
 
-  @include element('Control') {
-    display: block;
-    width: 100%;
-    padding: .5em .75em;
-    border: 1px solid $color-gray-lighter;
-    border-radius: $global-radius;
-    background-color: $color-white;
-    &::placeholder {
-      opacity: .5;
-    }
-    &:focus{
-      border-color: $color-primary;
-      outline: 0;
-    }
-  }
   @include element('Label') {
     display: inline-block;
-    margin-bottom: .5rem;
-    @include modifier('col'){
+    margin-bottom: vr(1)/2;
+
+    @include modifier('col') {
       padding-top: calc(.5rem - 1px * 2);
       padding-bottom: calc(.5rem - 1px * 2);
       margin-bottom: 0;
     }
   }
 
+  @include element('Control') {
+    display: block;
+    width: 100%;
+    //height: $Form-input-height;
+    font-weight: inherit;
+    line-height: inherit;
+    padding: $Form-input-padding;
+    color: $Form-input-color;
+    border: $Form-input-border;
+    border-radius: $global-radius;
+    background-color: $color-white;
+    // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214.
+    background-image: none;
+    background-clip: padding-box;
+
+    &:focus {
+      border-color: $color-primary;
+      outline: 0;
+    }
+    &::placeholder {
+      // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+      opacity: 1;
+    }
+    &:disabled,
+    &[readonly] {
+      background-color: $color-gray;
+      // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
+      opacity: 1;
+    }
+    // Unstyle the caret on `<select>`s in IE10+.
+    //&::-ms-expand {
+    //  background-color: transparent;
+    //  border: 0;
+    //}
+    @include modifier('invalid') {
+      border-color: $color-error;
+      color: $color-error;
+      & ~ small {
+        color: $color-error;
+      }
+    }
+  }
+
   @include element('Check') {
     position: relative;
-    display: block;
+    display: inline-block;
+    padding: $Form-input-padding;
+    padding-left: 0;
   }
+
   @include element('CheckLabel') {
-
+    padding-left: vr(1);
+    margin-bottom: 0;
+    cursor: pointer;
   }
+
   @include element('CheckInput') {
+    //position: absolute;
+    margin-top: .25rem;
+    margin-left: - vr(1);
+  }
+
+  // Special replacement for our grid system's `.row` for tighter form layouts.
+  @include element('Row') {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -$grid-gutter/4;
+    margin-left: -$grid-gutter/4;
+    > .col,
+    > [class*="col-"] {
+      padding-right: $grid-gutter/4;
+      padding-left: $grid-gutter/4;
+    }
+  }
+
+  // CUSTOM FORM
+  @include element('Custom') {
+    position: relative;
+    display: inline-flex;
+    padding-left: 1.5rem;
+    margin-right: 1rem;
+
+    // Input Types
+    @include modifier('checkbox') {
+      .Form__CustomIndicator {
+        border-radius: $Form-customCheckbox-radius;
+        border: $Form-custom-border;
+      }
+      .Form__CustomInput {
+        // States
+        &:checked ~ .Form__CustomIndicator {
+          background-image: $Form-customCheckbox-checked-icon;
+          border-color: $Form-custom-active-color;
+        }
+        &:active ~ .Form__CustomIndicator {
+          border-color: $Form-custom-active-color;
+        }
+      }
+    }
+    @include modifier('radio') {
+      .Form__CustomIndicator {
+        border-radius: $Form-customRadio-radius;
+        border: $Form-custom-border;
+      }
+      .Form__CustomInput {
+        // States
+        &:checked ~ .Form__CustomIndicator {
+          background-image: $Form-customRadio-checked-icon;
+          border-color: $Form-custom-active-color;
+        }
+        &:active ~ .Form__CustomIndicator {
+          border-color: $Form-custom-active-color;
+        }
+      }
+    }
 
   }
-  @include element('Group') {
 
+  @include element('CustomInput') {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+
+    // States
+    &:checked ~ .Form__CustomIndicator {
+      background-color: $Form-custom-active-color;
+    }
+    &:disabled {
+      ~ .Form__CustomIndicator {
+        background-color: $Form-custom-disabled-color;
+        border-color: $Form-custom-disabled-color;
+      }
+      ~ .Form__CustomDescription {
+        color: $Form-custom-disabled-color;
+      }
+    }
   }
+
+  @include element('CustomIndicator') {
+    position: absolute;
+    top: ((vr(1) - $Form-custom-height) / 2);
+    left: 0;
+    display: block;
+    width: $Form-custom-width;
+    height: $Form-custom-height;
+    pointer-events: none;
+    user-select: none;
+    background-color: $Form-custom-bg-color;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: $Form-custom-icon-size;
+    transition: $Form-custom-transition;
+  }
+
+  @include element('CustomDescription') {
+  }
+
   //==========================================================================
   // Modifier
   //==========================================================================
 
-  @include modifier('disabled'){
-    * {
-      opacity: .75;
-      cursor: not-allowed;
+  // Inline forms
+  //
+  // Make forms appear inline(-block) by adding the `.form-inline` class. Inline
+  // forms begin stacked on extra small (mobile) devices and then go inline when
+  // viewports reach <768px.
+  //
+  // Requires wrapping inputs and labels with `.form-group` for proper display of
+  // default HTML form controls and our custom form controls (e.g., input groups).
+
+  @include modifier('inline') {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+
+    // Because we use flex, the initial sizing of checkboxes is collapsed and
+    // doesn't occupy the full-width (which is what we want for xs grid tier),
+    // so we force that here.
+    @include element('Check') {
+      width: 100%;
+    }
+
+    @include breakpoint($grid-float-breakpoint) {
+
+      @include element('Label') {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0;
+        vertical-align: middle;
+        margin-right: vr(1)/2;
+      }
+
+      // Inline-block all the things for "inline"
+      @include element('Group') {
+        display: flex;
+        flex: 0 0 auto;
+        flex-flow: row wrap;
+        align-items: center;
+        margin-bottom: 0;
+      }
+
+      // Allow folks to *not* use `.form-group`
+      @include element('Control') {
+        display: inline-block;
+        width: auto; // Prevent labels from stacking above inputs in `.form-group`
+        vertical-align: middle;
+        margin-right: vr(1)/2;
+      }
+
+      // Remove default margin on radios/checkboxes that were used for stacking, and
+      // then undo the floating of radios and checkboxes to match.
+      @include element('Check') {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-right: vr(1)/2;
+      }
+
+      @include element('CheckLabel') {
+        padding-left: 0;
+      }
+
+      @include element('CheckInput') {
+        position: relative;
+        margin-top: 0;
+        margin-right: .15em;
+        margin-left: 0;
+      }
     }
   }
-
 }

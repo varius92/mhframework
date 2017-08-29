@@ -71,13 +71,77 @@
                             <!--Row-->
                             <tr class="Table__Row">
                                 <td class="Table__Cell">
-                                    <a href="#el-"
-                                       class="Button Button--link Button--example">
-                                        .Selector
-                                    </a>
+                                    .Form__Group
                                 </td>
                                 <td class="Table__Cell">
-                                    /
+                                    Gruppe an Controll-Elementen.
+                                </td>
+                            </tr>
+
+                            <!--Row-->
+                            <tr class="Table__Row">
+                                <td class="Table__Cell">
+                                    .Form__Label
+                                </td>
+                                <td class="Table__Cell">
+                                    Label eines Controll-Elementes.
+                                </td>
+                            </tr>
+
+                            <!--Row-->
+                            <tr class="Table__Row">
+                                <td class="Table__Cell">
+                                    .Form__Control
+                                </td>
+                                <td class="Table__Cell">
+                                    Text inputs, file inputs, select menus
+                                    und textareas.
+                                    <code>text</code>,
+                                    <code>password</code>,
+                                    <code>datetime-local</code>,
+                                    <code>date</code>,
+                                    <code>month</code>,
+                                    <code>time</code>,
+                                    <code>week</code>,
+                                    <code>number</code>,
+                                    <code>email</code>,
+                                    <code>url</code>,
+                                    <code>search</code>,
+                                    <code>tel</code>,
+                                    <code>color</code>,
+                                    <code>multiple</code>,
+                                    <code>size</code>,
+                                    <code>file</code>
+                                </td>
+                            </tr>
+
+                            <!--Row-->
+                            <tr class="Table__Row">
+                                <td class="Table__Cell">
+                                    .Form__Check
+                                </td>
+                                <td class="Table__Cell">
+                                    Container für Checkboxes und radios.
+                                </td>
+                            </tr>
+
+                            <!--Row-->
+                            <tr class="Table__Row">
+                                <td class="Table__Cell">
+                                    .Form__CheckLabel
+                                </td>
+                                <td class="Table__Cell">
+                                    Label für Checkboxes und radios.
+                                </td>
+                            </tr>
+
+                            <!--Row-->
+                            <tr class="Table__Row">
+                                <td class="Table__Cell">
+                                    .Form__CheckInput
+                                </td>
+                                <td class="Table__Cell">
+                                    Input-Element für Checkboxes und radios.
                                 </td>
                             </tr>
 
@@ -98,18 +162,18 @@
         <div class="row example-block" id="EXAMPLE1">
             <div class="col">
                 <div class="example__title">
-                    # Examplename
+                    # Form inputs
                 </div>
                 <div class="Demo Demo--toggle">
                     <div class="Demo__header">
                         <?php
-                        demo('element')
+                        demo('-textual-inputs')
                         ?>
                     </div>
                     <i class="Icon Icon--code Demo__toggle-btn"></i>
                     <div class="Demo__footer">
                         <?php
-                        html('element')
+                        html('-textual-inputs')
                         ?>
                     </div>
                 </div>
@@ -139,9 +203,33 @@
                             <!--Row-->
                             <tr class="Table__Row">
                                 <td class="Table__Cell">
-                                    <a href="#mod-"
+                                    <a href="#mod-inline"
                                        class="Button Button--link Button--example">
-                                        .Selector
+                                        .Form--inline
+                                    </a>
+                                </td>
+                                <td class="Table__Cell">
+                                    /
+                                </td>
+                            </tr>
+                            <!--Row-->
+                            <tr class="Table__Row">
+                                <td class="Table__Cell">
+                                    <a href="#mod-invalid"
+                                       class="Button Button--link Button--example">
+                                        .Form__Control--invalid
+                                    </a>
+                                </td>
+                                <td class="Table__Cell">
+                                    /
+                                </td>
+                            </tr>
+                            <!--Row-->
+                            <tr class="Table__Row">
+                                <td class="Table__Cell">
+                                    <a href="#mod-custom-checkbox"
+                                       class="Button Button--link Button--example">
+                                        .Form__Custom--checkbox
                                     </a>
                                 </td>
                                 <td class="Table__Cell">
@@ -162,26 +250,95 @@
         <h4>Examples</h4>
         <br>
         <!-- Example -->
-        <div class="row example-block" id="EXAMPLE1">
+        <div class="row example-block" id="mod-inline">
             <div class="col">
                 <div class="example__title">
-                    # Examplename
+                    # Inline form
                 </div>
                 <div class="Demo Demo--toggle">
                     <div class="Demo__header">
                         <?php
-                        demo('-textual-inputs')
+                        demo('--inline')
                         ?>
                     </div>
                     <i class="Icon Icon--code Demo__toggle-btn"></i>
                     <div class="Demo__footer">
                         <?php
-                        html('-textual-inputs')
+                        html('--inline')
                         ?>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Example -->
+        <div class="row example-block" id="mod-invalid">
+            <div class="col">
+                <div class="example__title">
+                    # Invalid inputs
+                </div>
+                <div class="Demo Demo--toggle">
+                    <div class="Demo__header">
+                        <?php
+                        demo('--invalid')
+                        ?>
+                    </div>
+                    <i class="Icon Icon--code Demo__toggle-btn"></i>
+                    <div class="Demo__footer">
+                        <?php
+                        html('--invalid')
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Example -->
+        <div class="row example-block" id="mod-custom-checkbox">
+            <div class="col">
+                <div class="example__title">
+                    # Custom checkbox
+                </div>
+                <div class="Demo Demo--toggle">
+                    <div class="Demo__header">
+                        <?php
+                        demo('--custom-checkbox')
+                        ?>
+                    </div>
+                    <i class="Icon Icon--code Demo__toggle-btn"></i>
+                    <div class="Demo__footer">
+                        <?php
+                        html('--custom-checkbox')
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Example -->
+        <div class="row example-block" id="mod-custom-radio">
+            <div class="col">
+                <div class="example__title">
+                    # Custom radio
+                </div>
+                <div class="Demo Demo--toggle">
+                    <div class="Demo__header">
+                        <?php
+                        demo('--custom-radio')
+                        ?>
+                    </div>
+                    <i class="Icon Icon--code Demo__toggle-btn"></i>
+                    <div class="Demo__footer">
+                        <?php
+                        html('--custom-radio')
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
     </div>
 
