@@ -150,7 +150,7 @@
 
         <!-- Example -->
         <div class="row example-block" id="EXAMPLE1">
-            <div class="col">
+            <div class="col col--sm-6">
                 <div class="example__title">
                     # Complete Card
                 </div>
@@ -164,6 +164,43 @@
                     <div class="Demo__footer">
                         <?php
                         html('-complete')
+                        ?>
+                    </div>
+                </div>
+            </div>
+            <div class="col col--sm-6">
+                <div class="example__title">
+                    # Varation
+                </div>
+                <div class="Demo Demo--toggle">
+                    <div class="Demo__header">
+                        <?php
+                        demo('-v2')
+                        ?>
+                    </div>
+                    <i class="Icon Icon--code Demo__toggle-btn"></i>
+                    <div class="Demo__footer">
+                        <?php
+                        html('-v2')
+                        ?>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col col--sm-6">
+                <div class="example__title">
+                    # Varation
+                </div>
+                <div class="Demo Demo--toggle">
+                    <div class="Demo__header">
+                        <?php
+                        demo('-v3')
+                        ?>
+                    </div>
+                    <i class="Icon Icon--code Demo__toggle-btn"></i>
+                    <div class="Demo__footer">
+                        <?php
+                        html('-v3')
                         ?>
                     </div>
                 </div>
