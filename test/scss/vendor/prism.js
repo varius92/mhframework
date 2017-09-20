@@ -2174,43 +2174,43 @@ Prism.languages.scss['atrule'].inside.rest = Prism.util.clone(Prism.languages.sc
         script.src = 'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.8/clipboard.min.js';
         head.appendChild(script);
     }
-
-    Prism.plugins.toolbar.registerButton('copy-to-clipboard', function (env) {
-        var linkCopy = document.createElement('a');
-        linkCopy.textContent = 'Copy';
-
-        if (!Clipboard) {
-            callbacks.push(registerClipboard);
-        } else {
-            registerClipboard();
-        }
-
-        return linkCopy;
-
-        function registerClipboard() {
-            var clip = new Clipboard(linkCopy, {
-                'text': function () {
-                    return env.code;
-                }
-            });
-
-            clip.on('success', function() {
-                linkCopy.textContent = 'Copied!';
-
-                resetText();
-            });
-            clip.on('error', function () {
-                linkCopy.textContent = 'Press Ctrl+C to copy';
-
-                resetText();
-            });
-        }
-
-        function resetText() {
-            setTimeout(function () {
-                linkCopy.textContent = 'Copy';
-            }, 5000);
-        }
-    });
+    //
+    // Prism.plugins.toolbar.registerButton('copy-to-clipboard', function (env) {
+    //     var linkCopy = document.createElement('a');
+    //     linkCopy.textContent = 'Copy';
+    //
+    //     if (!Clipboard) {
+    //         callbacks.push(registerClipboard);
+    //     } else {
+    //         registerClipboard();
+    //     }
+    //
+    //     return linkCopy;
+    //
+    //     function registerClipboard() {
+    //         var clip = new Clipboard(linkCopy, {
+    //             'text': function () {
+    //                 return env.code;
+    //             }
+    //         });
+    //
+    //         clip.on('success', function() {
+    //             linkCopy.textContent = 'Copied!';
+    //
+    //             resetText();
+    //         });
+    //         clip.on('error', function () {
+    //             linkCopy.textContent = 'Press Ctrl+C to copy';
+    //
+    //             resetText();
+    //         });
+    //     }
+    //
+    //     function resetText() {
+    //         setTimeout(function () {
+    //             linkCopy.textContent = 'Copy';
+    //         }, 5000);
+    //     }
+    // });
 })();
 

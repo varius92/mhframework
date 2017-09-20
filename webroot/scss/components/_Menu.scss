@@ -5,16 +5,16 @@ $Menu-Dropdown-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
 //==========================================================================
 // Block
 //==========================================================================
-
+// * Mobile first * //
 .Menu {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  position: relative;
-  padding-left: 0;
-  margin-bottom: 0;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
   list-style: none;
-  z-index: 1;
+  z-index: 9999;
 
   //==========================================================================
   // Elements
@@ -22,44 +22,85 @@ $Menu-Dropdown-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
 
   @include element('Item') {
     position: relative;
+    display: block;
     transition: $global-transition;
   }
 
   @include element('Link') {
+    position: relative;
     display: block;
     padding: $Menu-Link-padding;
-    white-space: nowrap;
-
     @include on-event(true) {
       text-decoration: none;
     }
-  }
-
-  /* Cross Component Style: Dropdown__Container */
-  @include element('Children') {
-    box-shadow: $Menu-Dropdown-shadow;
-    background: $Menu-background;
+    &.disabled {
+      cursor: default;
+    }
   }
 
   //==========================================================================
   // Modifier
   //==========================================================================
 
-  @include modifier('mobile') {
-    @include breakpoint(max $grid-float-breakpoint) {
-      background-color: $Menu-background;
-      flex-direction: column;
-    }
-  }
-
-  @include modifier('right') {
-    justify-content: flex-end;
-
+  @include modifier('sub') {
+    display: none;
+    box-shadow: $Menu-Dropdown-shadow;
+    background: $Menu-background;
     @include element('Item') {
-      display: flex;
-      justify-content: flex-end;
+      width: 100%;
     }
   }
+
+
+  //==========================================================================
+  // Desktopversion
+  //==========================================================================
+
+  @include breakpoint($grid-float-breakpoint) {
+    flex-direction: row;
+    @include modifier('sub') {
+      position: absolute;
+    }
+    @include element('Item') {
+      float: left;
+    }
+    &.sm-vertical {
+      li {
+        float: none;
+        width: 100%;
+      }
+    }
+  }
+
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //
+  //@include modifier('mobile') {
+  //  @include breakpoint(max $grid-float-breakpoint) {
+  //    background-color: $Menu-background;
+  //    flex-direction: column;
+  //  }
+  //}
+  //
+  //@include modifier('right') {
+  //  justify-content: flex-end;
+  //
+  //  @include element('Item') {
+  //    display: flex;
+  //    justify-content: flex-end;
+  //  }
+  //}
 
   @include modifier('center') {
     justify-content: center;
@@ -69,29 +110,29 @@ $Menu-Dropdown-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
       justify-content: center;
     }
   }
-
-  @include modifier('expand') {
-
-    @include element('Item') {
-      flex: 1 1 0;
-    }
-  }
-
-  @include modifier('vertical') {
-    flex-direction: column;
-
-    @include element('Children') {
-      left: 100%;
-      top: 0;
-    }
-  }
-
-  @include modifier('vertical-inline') {
-    flex-direction: column;
-
-    @include element('Children') {
-      position: relative;
-      box-shadow: none;
-    }
-  }
+  //
+  //@include modifier('expand') {
+  //
+  //  @include element('Item') {
+  //    flex: 1 1 0;
+  //  }
+  //}
+  //
+  //@include modifier('vertical') {
+  //  flex-direction: column;
+  //
+  //  @include element('Children') {
+  //    left: 100%;
+  //    top: 0;
+  //  }
+  //}
+  //
+  //@include modifier('vertical-inline') {
+  //  flex-direction: column;
+  //
+  //  @include element('Children') {
+  //    position: relative;
+  //    box-shadow: none;
+  //  }
+  //}
 }
