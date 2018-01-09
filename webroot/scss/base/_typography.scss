@@ -51,6 +51,12 @@ p, figure, blockquote, ul, ol, dl, dd, pre, table, fieldset, hr {
   margin-top: 0;
 }
 
+hr {
+  border: none;
+  height: 1px;
+  background: #7b7b7b;
+}
+
 blockquote {
   padding-left: vr(1);
 }

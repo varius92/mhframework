@@ -3,7 +3,7 @@ $color-elem: #228843;
 $color-mod: #ab345c;
 
 .doc {
-  h1 {
+ #intro h1 {
     small {
       padding-left: 0.3em;
       display: block;
@@ -13,15 +13,6 @@ $color-mod: #ab345c;
       color: $color-gray;
     }
   }
-  hr {
-    margin: 1.75rem auto;
-    border: none;
-    height: 1px;
-    background: #7b7b7b;
-    opacity: .1;
-    width: 50%;
-  }
-
   article {
     margin-bottom: vr(4);
   }

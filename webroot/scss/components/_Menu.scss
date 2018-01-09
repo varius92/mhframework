@@ -51,7 +51,6 @@ $Menu-Dropdown-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
     }
   }
 
-
   //==========================================================================
   // Desktopversion
   //==========================================================================
@@ -72,35 +71,21 @@ $Menu-Dropdown-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
     }
   }
 
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //
-  //@include modifier('mobile') {
-  //  @include breakpoint(max $grid-float-breakpoint) {
-  //    background-color: $Menu-background;
-  //    flex-direction: column;
-  //  }
-  //}
-  //
-  //@include modifier('right') {
-  //  justify-content: flex-end;
-  //
-  //  @include element('Item') {
-  //    display: flex;
-  //    justify-content: flex-end;
-  //  }
-  //}
+  @include modifier('mobile') {
+    @include breakpoint(max $grid-float-breakpoint) {
+      background-color: $Menu-background;
+      flex-direction: column;
+    }
+  }
+
+  @include modifier('right') {
+    justify-content: flex-end;
+
+    @include element('Item') {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
 
   @include modifier('center') {
     justify-content: center;
@@ -110,29 +95,29 @@ $Menu-Dropdown-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
       justify-content: center;
     }
   }
-  //
-  //@include modifier('expand') {
-  //
-  //  @include element('Item') {
-  //    flex: 1 1 0;
-  //  }
-  //}
-  //
-  //@include modifier('vertical') {
-  //  flex-direction: column;
-  //
-  //  @include element('Children') {
-  //    left: 100%;
-  //    top: 0;
-  //  }
-  //}
-  //
-  //@include modifier('vertical-inline') {
-  //  flex-direction: column;
-  //
-  //  @include element('Children') {
-  //    position: relative;
-  //    box-shadow: none;
-  //  }
-  //}
+
+  @include modifier('expand') {
+
+    @include element('Item') {
+      flex: 1 1 0;
+    }
+  }
+
+  @include modifier('vertical') {
+    flex-direction: column;
+
+    @include element('Children') {
+      left: 100%;
+      top: 0;
+    }
+  }
+
+  @include modifier('vertical-inline') {
+    flex-direction: column;
+
+    @include element('Children') {
+      position: relative;
+      box-shadow: none;
+    }
+  }
 }
